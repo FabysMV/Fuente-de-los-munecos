@@ -39,5 +39,5 @@ de los dos hermanitos cobran vida, salen a jugar, divertirse, sus risas llenas d
 hasta que los primeros rayos que acompañan al amanecer aparecen. Es entonces cuando vuelven a su pedestal, para volver
 a quedar pretrificados, esperando a que la noche caiga una vez más y así poder volver a jugar una noche más...
 
-![Fuente de los muñecos en el barrio de Xonaca](https://github.com/FabysMV/Fuente-de-los-munecos/blob/7b09bb53ef8141561e2ab438184908cd7aae595c/Im%C3%A1genes/Fuente_mu%C3%B1eco.png)
+  ![Fuente de los muñecos en el barrio de Xonaca](https://github.com/FabysMV/Fuente-de-los-munecos/blob/7b09bb53ef8141561e2ab438184908cd7aae595c/Im%C3%A1genes/Fuente_mu%C3%B1eco.png)
 
