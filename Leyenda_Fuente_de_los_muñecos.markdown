@@ -12,7 +12,7 @@ debido a que la gente adinerada del centro del país construía sus fincas.
 
 Frente a la iglesia de La Candelaria, se encontraba una casona,la cual fue ocupada
 por la emperatriz Carlota, esposa de Maximiliano de Habsburgo. En dicha casona
-Maximinio Ávila Camacho,ex-gobernador de Puebla y hermano del expresidente Manuel Ávila 
+Maximinio Ávila Camacho, ex-gobernador de Puebla y hermano del expresidente Manuel Ávila 
 Camacho, construyó su casa de verano.
 
 Este inmueble lo cuidaba un caballerango, cuyo nombre se ha perdido ya entre las bocas
