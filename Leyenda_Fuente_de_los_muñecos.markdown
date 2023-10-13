@@ -39,3 +39,5 @@ de los dos hermanitos cobran vida, salen a jugar, divertirse, sus risas llenas d
 hasta que los primeros rayos que acompañan al amanecer aparecen. Es entonces cuando vuelven a su pedestal, para volver
 a quedar pretrificados, esperando a que la noche caiga una vez más y así poder volver a jugar una noche más...
 
+Imagenes/Fuente_muñeco.png
+
