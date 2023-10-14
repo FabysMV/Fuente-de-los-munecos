@@ -65,7 +65,7 @@ void loop() {
   
   if(digitalRead(Up) == HIGH)
   {
-    Up == true;
+    Up = true;
     }
  
   if(digitalRead(Sleep) == HIGH && digitalRead(Up)== LOW)//si se presionó el botón de dormir
