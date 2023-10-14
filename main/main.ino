@@ -23,17 +23,27 @@ int Led_b = 2;
 #include "secuencia.h"
 //hacemos el objeto de las acciones de los niños
 accion nenes;
+// Variables para controlar las acciones, pra que no se haga un ciclo
 int s = 0; //secuencia que se va a realizar
+int last_s = 10; //ultima secuencia realizada
+boolean flag_s = false;
+unsigned long tiempo = 0;
+unsigned long tiempo_prev = 0;
+unsigned long cont_s = 0;
 ///////////////////////////////////////////////////////////////////////
 // Variables y cositas para el contador que iniciará la secuencia automática
 boolean flag = false;
-unsigned long tiempo = 0;
 unsigned long tiempo_set = 0;
 unsigned long delta_sec = 0;
 int in = 0; //para las veces que ha entrado en un ruido && ruido
 
-////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+// Estados escuchando y automatico
 
+
+
+
+////////////////////////////////////////////////////////////////////////
 
 void setup() {
   Serial.begin(9600);
@@ -46,22 +56,13 @@ void setup() {
   /////////////////////////////
 //parameter value of 1000 is fully counter-clockwise, 2000 is fully clockwise, and 1500 is in the middle.
 //-----------------Revisión del movimiento de los motores------------
-  cuello_g.mov(m_g, 1200);
-  cuello_b.mov(m_b, 1200);
-  delay(100);
-  cuello_g.Stop(m_g);
-  cuello_b.Stop(m_b);
-  cuello_g.mov(m_g, 1700);
-  cuello_b.mov(m_b, 1700);
-  delay(100);
-  cuello_g.Stop(m_g);
-  cuello_b.Stop(m_b);
+  
 //--------------------------------------------------------------------  
 }
 
 void loop() {
 
-  tiempo = millis();
+  
   if(digitalRead(Up) == HIGH)
   {
     Up == true;
@@ -81,7 +82,7 @@ void loop() {
       }while(Up == false); //cuando Up esté activo, salimos del ciclo
     
     }
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   if(Up == true) //se ha apretado el botón que despierta a los niños
   {
     Serial.println("despierto!!");
@@ -108,13 +109,13 @@ void loop() {
 
       if(0 < analogRead(A1) < bajo) // le hablan bajo EXCLUSIVAMENTE a la nena
       {
-        flag == false;
+        flag = false;
         // movimientos amables de explicación
         }//end if bajo a nena
 
       if(alto < analogRead(A1)< max)
       {
-         flag == false;
+         flag = false;
         //movimientos agresivos de protección
         
         }//end if alto a nena
@@ -130,13 +131,13 @@ void loop() {
 
       if(0 < analogRead(A0) < bajo) // le hablan bajo EXCLUSIVAMENTE a nene
       {
-        flag == false;
+        flag = false;
         // niño habla / explica algo amable
         }//end if bajo a nene
 
       if(alto < analogRead(A0)< max) // le hablan bajo EXCLUSIVAMENTE a nene AGRESIVO
       {
-          flag == false;
+          flag = false;
         //movimientos agresivos defensa
         
         }//end if alto a nene
@@ -145,9 +146,9 @@ void loop() {
 //---------------------------------------------------------------------------------------------------------------
 ///      CUANDO NO HAY RUIDO --> LE HABLAN A LOS DOS    ///
 
-      //a la nenta le hablan alto?
+      //a la nena le hablan alto?
       if(alto < analogRead(A1)< max)
-      {   flag == false;
+      {   flag = false;
           if(alto < analogRead(A0)< max)
           {//acciones AMBOS AGRESIVOS
             }//le hablan alto al nene?
@@ -159,7 +160,7 @@ void loop() {
 
         //a nena le hablan bajo?
       if(0 < analogRead(A1) < bajo){
-        flag == false;
+        flag = false;
         if(alto < analogRead(A0)< max)
           {//agresivo por él, pide de favor que se eleje de ella
             }//le hablan alto al nene?
@@ -174,28 +175,42 @@ void loop() {
 //veamos: lo sabremos con una flag que activará siempre esto
       if(flag == true)
       {
-        switch(s){
-          case 0:
-            accion.baile();
-            s++;
-            break;
-          case 1:
-            accion.lamento();
-            s++;
-            break;
-          case 2:
-            accion.canto();
-            s = 0;
-            break;
+          //cálculos para el timer
+          tiempo_prev = tiempo;
+          tiempo = millis();
+          cont_s = cont_s + tiempo - tiempo_prev; //incrementa el conteo en delta
           
-          }
-        
+          if(last_s != s)
+          {
+              switch(s){
+              case 0:
+                nenes.baile();
+                break;
+              case 1:
+                nenes.lamento();
+                break;
+              case 2:
+                nenes.canto();
+                break;
+              }//end switch s
+            }// end if last_s
+
+          if(cont_s >= 30000)//el límite debe de ser la duración del audio + 30 segundos
+          {
+            //ahora se cambia la secuencia
+            Serial.println("cambio de secuencia");
+            s = random(0,2);
+            Serial.println(s);
+            cont_s = 0;
+            }
+            
+          last_s = s;
         //elegir una secuencia 1.-baile  2.-lamento  3.-canto 
-       }
+       }//end if flag true --> que el contador ya llegó al limite
  /////////////////////////////////////////////////////////////////////////////////////////
-    }// en up==1
+    }// en up==true
 
    else{}
 
 
-}
+}//end loop
