@@ -1,6 +1,7 @@
 # Leyenda de la fuente de los muñecos
 El funcionamiento básico de la programación de los muñecos se describe en el siguiente diagrama. 
-
+<img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Mu%C3%B1ecos.png" width="100%"
+  height="100%"/>
 Lo primero que se hace es el control de estado de los muñecos, esto se logra con dos botones que los despiertan o los ponen a dormir.
 ```ruby
 if(digitalRead(Up) == HIGH)//si se presionó el botón, despertarán los muñecos
