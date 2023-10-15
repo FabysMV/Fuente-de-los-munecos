@@ -66,23 +66,26 @@ En este apartado se decriben los circuitos implementados para el funcionamiento 
   
 ## EVIDENCIAS.
 
-![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/ac7fad7c-0b0e-44c8-935f-2aaac7ba4942)
-
-![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/e592b361-e638-42d4-ba4a-2e542bcb2edb)
-
+<p align="justify">
+<figure>
+  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/e592b361-e638-42d4-ba4a-2e542bcb2edb"/></p>
+  <figcaption> circuito de reproducción de audio.</figcaption>
+</figure>
 
 
 <p align="justify">
 <figure>
-    <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/961bb3e5-4920-4a95-888d-2b5784c8ca0b"/></p>
+  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/961bb3e5-4920-4a95-888d-2b5784c8ca0b"/></p>
   <figcaption> circuito de servomotor controlado por micrófono.</figcaption>
 </figure>
+
   
 <p align="justify">
 <figure>
-    <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/bd59a6ca-a73b-49d9-92c8-8ab126f9c04f"/></p>
+  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/bd59a6ca-a73b-49d9-92c8-8ab126f9c04f"/></p>
   <figcaption>Impresión de mandibula.</figcaption>
 </figure>
+
 
 <p align="center">
 <figure>
