@@ -34,23 +34,29 @@ La pequeña niña de rostro pálido, con un libro debajo de su brazo derecho, po
 <p align="justify">
 Desde esa fecha e incluso ahora, los habitantes del barrio de Xonaca cuentan como por las noches,las figuras de los dos hermanitos cobran vida, salen a jugar, divertirse, sus risas llenas de júbilo resuenan por todo el barrio hasta que los primeros rayos que acompañan al amanecer aparecen. Es entonces cuando vuelven a su pedestal, para volver a quedar pretrificados, esperando a que la noche caiga una vez más y así poder volver a jugar una noche más.</p>
 
-<div>
-<p style = 'text-align:center;'>
-  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/7b09bb53ef8141561e2ab438184908cd7aae595c/Im%C3%A1genes/Fuente_mu%C3%B1eco.png">
-</p>
-</div>
 
+
+  ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/8c69c518-3ff8-407c-a290-639ac9b6fcd6)
+
+
+  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
+  height="100%"/>
 ## ¿Qué hacen los muñecos?
 <p align="justify">
 El presente proyecto consiste en el desarrollo de dos animatrónicos, un niño y una niña, los cuales interactuarán con el público. Para esto, se utiliza un control a través de voz que detecta la intensidad con la que se les habla a los muñecos de la fuente. Éstos reaccionarán de diferente forma dependiendo de cómo se realice la comunicación con ellos.
 
 De igual manera, la reacción de los muñecos será a través de movimiento, donde cada frecuencia de voz envía una señal diferente a los servomotores para que estos ejecuten una secuencia de movimientos predeterminados.</p>
 
-En la siguiente tabla se explica las reacciones que tendrán los muñecos para las diferentes intensidades que sean detectadas.
+En la siguiente tabla se explica las reacciones que tendrán los muñecos para las diferentes intensidades que sean detectadas. </p>
 
-
-<img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
+<img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tabla_accion.png" width="100%"
   height="100%"/>
+
+<p align="justify">Si nadie le habla a los muñecos, entrarán en un estado de <i>stand by</i> y harán diferentes acciones predeterminadas como cantar o mover sus cabezas.</p>  <br>  <br>
+ <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
+  height="100%"/>
+
+  
 ## PROCESO DE ELABORACIÓN.
 
 **_Parte electrónica_**
@@ -64,8 +70,11 @@ En primera instancia, se ocuparon de dos circuitos de amplificación con filtrad
 ![Circuito amplificador](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/4f598ded-af15-4841-99ba-1e9054e95909)
 
 ![2](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/710536d2-34ef-4c8f-bbf4-9ae741a398ac)
+>Circuitos amplificadores.
 
 ![servos](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/dacdbc3f-c55e-4eed-bd40-7d0c728a11ca)
+>Curcuito controlador de servomotores a través de micrófono.
+
 
 
 
@@ -75,37 +84,44 @@ En primera instancia, se ocuparon de dos circuitos de amplificación con filtrad
 
 
 **_Construcción de los muñecos_**
+<p align="justify">
+La elaboración de cada animatronico se basa en una estructura de CPVC, con la cual se da forma al cuerpo. de igual manera, para las uniones de las extremidades se utilizaron codos de CPVC. En general, cada muñeco cuenta con unas dimensiondes de 90cm de altura por 30cm de ancho, lo cual resulta conveniente para las dimensiones del escenario.</p>
+
+![Diseño prelimilar muñecos](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/44503edb-7624-40fe-b8d6-a22f6f5d88d6)
+>diseño preliminar de los animatrónicos.
+
+<p align="justify">
+En el caso del niño se realizó el diseño en SolidWorks de un mecanismo que le permitiera abrir y cerrar la mandibula, lo que posteriormente se llevó a imprimir 3D para montarlo en la cabeza. cabe destacar que ambos muñecos tienen movimiento horizontal de sus cabezas.</p>
+
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/72456376-9fee-4d4a-abcd-db760ba1be0f)
+>Diseño de la mandíbula.
+
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/ba1786ad-cba7-4a77-8d9d-469d866862e9)
+>Adecuacion del mecanismo de la mandíbula.
+
+<p align="justify">
+Como se puede observar en la imagen anterior se llevaron a cabo algunos ajustes para que el mecanismo cumpliera con las especificaciones de movimiento requeridas.</p>
+
+<p align="justify">
+Para el escenario, se tomó en cuenta unas dimensiones del pozo de 60cm de diámetro, la decoración de este se realizó completamente a mano para darle más detalle. En el caso de la talavera se usaron moldes para posteriormente usarlo al momento de pintar el </p>
 
 
-<img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
+
+ <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
-  
 ## EVIDENCIAS.
 
-<p align="justify">
-<figure>
-  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/e592b361-e638-42d4-ba4a-2e542bcb2edb"/></p>
-  <figcaption> circuito de reproducción de audio.</figcaption>
-</figure>
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/e592b361-e638-42d4-ba4a-2e542bcb2edb)
+>Circuito de reproducción de audio. 
 
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/961bb3e5-4920-4a95-888d-2b5784c8ca0b)
+>Circuito de servomotor controlado por microfono.
 
-<p align="justify">
-<figure>
-  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/961bb3e5-4920-4a95-888d-2b5784c8ca0b"/></p>
-  <figcaption> circuito de servomotor controlado por micrófono.</figcaption>
-</figure>
-
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/bd59a6ca-a73b-49d9-92c8-8ab126f9c04f)
+>Diseño de mandíbula previo a impresión.
   
-<p align="justify">
-<figure>
-  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/bd59a6ca-a73b-49d9-92c8-8ab126f9c04f"/></p>
- 
-</figure>
->Impresión de mandibula.
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/93f09457-6ce6-49e3-8455-ece9f894928a)
+>Corte de piezas del cuerpo.
 
-
-<p align="center">
-<figure>
-    <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/93f09457-6ce6-49e3-8455-ece9f894928a"/></p>
-  <figcaption> Corte de piezas del cuerpo. </figcaption>
-</figure>
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/2d95d010-23d4-4597-893b-3fb333e7e79b)
+>Ensamble de cabeza y cuerpo.
