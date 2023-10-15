@@ -110,14 +110,13 @@ void loop() {
           else if(0 < analogRead(A1) < bajo) // le hablan bajo EXCLUSIVAMENTE a la nena
           {
             flag = false;
-            // movimientos amables de explicación
+            nenes.g_bajo();
             }//end if bajo a nena
     
           else if(alto < analogRead(A1)< max)
           {
              flag = false;
-            //movimientos agresivos de protección
-            
+            nenes.g_alto(); 
             }//end if alto a nena
       
       }//end if ruido a nene-----------------------------------------------------------------------------
@@ -130,13 +129,13 @@ void loop() {
           if(0 < analogRead(A0) < bajo) // le hablan bajo EXCLUSIVAMENTE a nene
           {
             flag = false;
-            // niño habla / explica algo amable
+            nenes.b_bajo();
             }//end if bajo a nene
     
-          else if(alto < analogRead(A0)< max) // le hablan bajo EXCLUSIVAMENTE a nene AGRESIVO
+          else if(alto < analogRead(A0)< max) // le hablan alto EXCLUSIVAMENTE a nene 
           {
               flag = false;
-            //movimientos agresivos defensa
+              nenes.b_alto();
             
             }//end if alto a nene
       
@@ -148,10 +147,11 @@ void loop() {
       else if(alto < analogRead(A1)< max)
       {   flag = false;
           if(alto < analogRead(A0)< max)
-          {//acciones AMBOS AGRESIVOS
+          {//acciones AMBOS alto
+            nenes.ambos_alto();
             }//le hablan alto al nene?
           else if(0 < analogRead(A0) < bajo)
-          {//HABLAN A NENA PROTECTOR Y PIDE QUE LO DEJEN A ÉL
+          {nenes.ambos_g();//le hablan más alto a la nena, el se quiere incluir
             } // le hablan bajo al nene?
           
         }//end if nena alta 
@@ -161,11 +161,11 @@ void loop() {
       {
         flag = false;
         if(alto < analogRead(A0)< max)
-          {//agresivo por él, pide de favor que se eleje de ella
+          { nenes.ambos_b();
             }//le hablan alto al nene?
             
           else if(0 < analogRead(A0) < bajo)
-          {//ambos hablan amables y él habla en plural
+          {nenes.ambos_bajo();
             } // le hablan bajo al nene?
         
         }//end if hablan bajo a nena
