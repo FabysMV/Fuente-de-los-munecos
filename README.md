@@ -22,3 +22,9 @@ Desde esa fecha e incluso ahora, los habitantes del barrio de Xonaca cuentan com
 
 <div style="text-align:center"> ![Fuente de los muñecos en el barrio de Xonaca](https://github.com/FabysMV/Fuente-de-los-munecos/blob/7b09bb53ef8141561e2ab438184908cd7aae595c/Im%C3%A1genes/Fuente_mu%C3%B1eco.png)
 
+## DESCRIPCIÓN DE LOS ANIMATRÓNICOS.
+
+El presente proyecto consiste en el desarrollo de dos animatrónicas, un niño y una niña, los cuales interactuarán con el público. Para esto, se utiliza un control a través de voz que detecta la intensidad con la que se les habla a los muñecos de la fuente. Éstos reaccionarán de diferente forma dependiendo de cómo se realice la comunicación con ellos.
+
+De igual manera, la reacción de los muñecos será a través de movimiento, donde cada frecuencia de voz envía una señal diferente a los servomotores para que estos ejecuten una secuencia de movimientos predeterminados.
+
