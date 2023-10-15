@@ -46,14 +46,16 @@ El presente proyecto consiste en el desarrollo de dos animatrónicos, un niño y
 
 De igual manera, la reacción de los muñecos será a través de movimiento, donde cada frecuencia de voz envía una señal diferente a los servomotores para que estos ejecuten una secuencia de movimientos predeterminados.</p>
 
-En la siguiente tabla se explica las reacciones que tendrán los muñecos para las diferentes intensidades que sean detectadas.
+En la siguiente tabla se explica las reacciones que tendrán los muñecos para las diferentes intensidades que sean detectadas. </p>
 
 <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tabla_accion.png" width="100%"
   height="100%"/>
 
-Si nadie le habla a los muñecos, entrarán en un estado de <i>stand by</i> y harán diferentes acciones predeterminadas como cantar o mover sus cabezas.
+<p align="justify">Si nadie le habla a los muñecos, entrarán en un estado de <i>stand by</i> y harán diferentes acciones predeterminadas como cantar o mover sus cabezas.</p>  <br>  <br>
  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
+
+  
 ## PROCESO DE ELABORACIÓN.
 
 **_Parte electrónica_**
