@@ -93,6 +93,15 @@ La elaboración de cada animatronico se basa en una estructura de CPVC, con la c
 En el caso del niño se realizó el diseño en CATIA de un mecanismo que le permitiera abrir y cerrar la mandibula, lo que posteriormente se llevó a imprimir 3D para montarlo en la cabeza. cabe destacar que ambos muñecos tienen movimiento horizontal de sus cabezas.</p>
 
 
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/ba1786ad-cba7-4a77-8d9d-469d866862e9)
+>Adecuacion del mecanismo de la mandíbula.
+
+<p align="justify">
+Como se puede observar en la imagen anterior se llevaron a cabo algunos ajustes para que el mecanismo cumpliera con las especificaciones de movimiento requeridas.</p>
+
+<p align="justify">
+Para el escenario, se tomó en cuenta unas dimensiones del pozo de 60cm de diámetro, la decoración de este se realizó completamente a mano para darle más detalle. En el caso de la talavera se usaron moldes para posteriormente usarlo al momento de pintar el </p>
+
 
 
  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
