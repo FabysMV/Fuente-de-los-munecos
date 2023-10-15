@@ -38,6 +38,17 @@ Desde esa fecha e incluso ahora, los habitantes del barrio de Xonaca cuentan com
 
   ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/8c69c518-3ff8-407c-a290-639ac9b6fcd6)
 
+## **Integrantes del equipo.** 
+
+<p align="justify">
+El equipo esta conformado por alumnos de la carrera de Licenciatura en Ingeniería Mecatrónica de ovtavo y noveno semestre.</p>
+
+| NOMBRE                         | SEMESTRE|
+|--------------------------------|---------|
+| Ángel López Velasco.           |    8°   | 
+| Fabiola Muñoz Vera.            |    9°   | 
+| Fátima Azuara Lim.             |    9°   | 
+| Manuel Alejandro Vargas Castro.|    8°   | 
 
   <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
