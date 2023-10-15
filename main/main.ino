@@ -92,80 +92,79 @@ void loop() {
     if(bajo<analogRead(A0)<alto) //el microfono de la nene tiene ruido?
     {
 
-     //---------------------------------------------------------------------------------- 
-      if(bajo<analogRead(A1)<alto) //tiene ruido la nena?
-      {
-        if(flag == false){in = 0;}
-        if(in == 0){tiempo_set = millis();}
-        delta_sec = millis() - tiempo_set;
-        in ++;
-        if(delta_sec >= 60000){flag = true;
-                               tiempo_set = 0;
-                               }
-        ////// NADA //////////
-        //// COMIENZO O SIGO EL CONTEO////
-        
-        }//end if ruido nena
-
-      if(0 < analogRead(A1) < bajo) // le hablan bajo EXCLUSIVAMENTE a la nena
-      {
-        flag = false;
-        // movimientos amables de explicación
-        }//end if bajo a nena
-
-      if(alto < analogRead(A1)< max)
-      {
-         flag = false;
-        //movimientos agresivos de protección
-        
-        }//end if alto a nena
+         //---------------------------------------------------------------------------------- 
+          if(bajo<analogRead(A1)<alto) //tiene ruido la nena?
+          {
+            //// COMIENZO O SIGO EL CONTEO//////////
+            if(flag == false){in = 0;}
+            if(in == 0){tiempo_set = millis();}
+            delta_sec = millis() - tiempo_set;
+            in ++;
+            if(delta_sec >= 60000){flag = true;
+                                   tiempo_set = 0;}
+            ////// NADA ////////////////////////////
+            
+            
+            }//end if ruido nena
+    
+          else if(0 < analogRead(A1) < bajo) // le hablan bajo EXCLUSIVAMENTE a la nena
+          {
+            flag = false;
+            // movimientos amables de explicación
+            }//end if bajo a nena
+    
+          else if(alto < analogRead(A1)< max)
+          {
+             flag = false;
+            //movimientos agresivos de protección
+            
+            }//end if alto a nena
       
       }//end if ruido a nene-----------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-       if(bajo<analogRead(A1)<alto) //el microfono de la nena tiene ruido?
+     else if(bajo<analogRead(A1)<alto) //el microfono de la nena tiene ruido?
     {
 
      //---------------------------------------------------------------------------------- 
-      
-
-      if(0 < analogRead(A0) < bajo) // le hablan bajo EXCLUSIVAMENTE a nene
-      {
-        flag = false;
-        // niño habla / explica algo amable
-        }//end if bajo a nene
-
-      if(alto < analogRead(A0)< max) // le hablan bajo EXCLUSIVAMENTE a nene AGRESIVO
-      {
-          flag = false;
-        //movimientos agresivos defensa
-        
-        }//end if alto a nene
+          if(0 < analogRead(A0) < bajo) // le hablan bajo EXCLUSIVAMENTE a nene
+          {
+            flag = false;
+            // niño habla / explica algo amable
+            }//end if bajo a nene
+    
+          else if(alto < analogRead(A0)< max) // le hablan bajo EXCLUSIVAMENTE a nene AGRESIVO
+          {
+              flag = false;
+            //movimientos agresivos defensa
+            
+            }//end if alto a nene
       
       }//end if ruido a nena-------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------
 ///      CUANDO NO HAY RUIDO --> LE HABLAN A LOS DOS    ///
 
       //a la nena le hablan alto?
-      if(alto < analogRead(A1)< max)
+      else if(alto < analogRead(A1)< max)
       {   flag = false;
           if(alto < analogRead(A0)< max)
           {//acciones AMBOS AGRESIVOS
             }//le hablan alto al nene?
-          if(0 < analogRead(A0) < bajo)
+          else if(0 < analogRead(A0) < bajo)
           {//HABLAN A NENA PROTECTOR Y PIDE QUE LO DEJEN A ÉL
             } // le hablan bajo al nene?
           
         }//end if nena alta 
 
         //a nena le hablan bajo?
-      if(0 < analogRead(A1) < bajo){
+      else if(0 < analogRead(A1) < bajo)
+      {
         flag = false;
         if(alto < analogRead(A0)< max)
           {//agresivo por él, pide de favor que se eleje de ella
             }//le hablan alto al nene?
             
-          if(0 < analogRead(A0) < bajo)
+          else if(0 < analogRead(A0) < bajo)
           {//ambos hablan amables y él habla en plural
             } // le hablan bajo al nene?
         

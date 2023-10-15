@@ -27,25 +27,6 @@ class motor_mov{
       }
   
       
-    void maxima(int pin){
-       
-    //  servo.attach(pin);
-      servo.writeMicroseconds(1750); 
-     
-       //  servo.attach(pin); 
-     // Serial.println("HOLI horario");
-      }
-
-     
-    void maxima_ccw(int pin){
-     
-       servo.attach(pin);
-       servo.writeMicroseconds(1250);
-     //   servo.writeMicroseconds(1250);
-       //  servo.attach(pin);
-    //  Serial.println("HOLI antihorario");
-       }
-
 
    void mov(int pin, int vale)
      {
