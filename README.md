@@ -36,7 +36,8 @@ Desde esa fecha e incluso ahora, los habitantes del barrio de Xonaca cuentan com
 
 
 
-  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/7b09bb53ef8141561e2ab438184908cd7aae595c/Im%C3%A1genes/Fuente_mu%C3%B1eco.png">
+  ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/8c69c518-3ff8-407c-a290-639ac9b6fcd6)
+
 
   <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
