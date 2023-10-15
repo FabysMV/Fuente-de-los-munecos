@@ -116,7 +116,11 @@ La construcción de las cabezas se llevó haciendo la estructura con periódico 
 
 Finalmente, para decoración del escenario se realizaron flores de decoración para poner alrededor del escenario y tenga mas vista y a la vez haga armonía con el resto de componentes del entorno y darle toques representativos y tipicos de la temporada.</p>
 
+  ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/9c047262-ebbb-4115-897c-fb77b75055e4)
+
+
   
+
  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
 ## EVIDENCIAS.
