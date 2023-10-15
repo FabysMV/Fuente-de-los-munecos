@@ -65,39 +65,30 @@ void setup() {
 void loop() {
 
   
-  if(digitalRead(Up) == HIGH)
+  if(digitalRead(Up) == HIGH)//si se presionó el botón, despertarán los muñecos
   {
     Up = true;
     }
  
   if(digitalRead(Sleep) == HIGH && digitalRead(Up)== LOW)//si se presionó el botón de dormir
-  {
-    delta_sec = 0;
+  { delta_sec = 0;
     Up = false;
     Serial.println("mimido");
-    do{
-       //vemos que no se haya dado la indicación de que despierten
+    do{ //vemos que no se haya dado la indicación de que despierten
         if(digitalRead(Up) == HIGH)
-        {Up = true;
-        Serial.println("despertando...");
+        {Up = true; Serial.println("despertando...");
         delay(100);}//si es así, cambiamos el estado de Up a activo
       }while(Up == false); //cuando Up esté activo, salimos del ciclo
-    
     }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   if(Up == true) //se ha apretado el botón que despierta a los niños
   {
-    Serial.println("despierto!!");
-    //
-    // Procedemos a revisar el estado el micrófono
+    Serial.println("despierto!!");// Procedemos a revisar el estado el micrófono
     Serial.println("revisando micrófonos...");
     if(bajo<analogRead(A0)<alto) //el microfono de la nene tiene ruido?
-    {
-
-         //---------------------------------------------------------------------------------- 
+    {//---------------------------------------------------------------------------------- 
           if(bajo<analogRead(A1)<alto) //tiene ruido la nena?
-          {
-            //// COMIENZO O SIGO EL CONTEO//////////
+          {//// COMIENZO O SIGO EL CONTEO//////////
             if(flag == false){in = 0;}
             if(in == 0){tiempo_set = millis();}
             delta_sec = millis() - tiempo_set;
@@ -105,72 +96,45 @@ void loop() {
             if(delta_sec >= 60000){flag = true;
                                    tiempo_set = 0;}
             ////// NADA ////////////////////////////
-            
-            
             }//end if ruido nena
-    
           else if(0 < analogRead(A1) < bajo) // le hablan bajo EXCLUSIVAMENTE a la nena
-          {
-            flag = false;
-            nenes.g_bajo();
-            }//end if bajo a nena
-    
+          { flag = false;
+            nenes.g_bajo();}//end if bajo a nena
           else if(alto < analogRead(A1)< max)
-          {
-             flag = false;
-            nenes.g_alto(); 
-            }//end if alto a nena
-      
+          { flag = false;
+            nenes.g_alto();}//end if alto a nena  
       }//end if ruido a nene-----------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////
      else if(bajo<analogRead(A1)<alto) //el microfono de la nena tiene ruido?
-    {
-
-     //---------------------------------------------------------------------------------- 
+    {//---------------------------------------------------------------------------------- 
           if(0 < analogRead(A0) < bajo) // le hablan bajo EXCLUSIVAMENTE a nene
-          {
-            flag = false;
-            nenes.b_bajo();
-            }//end if bajo a nene
-    
+          { flag = false;
+            nenes.b_bajo();}//end if bajo a nene
           else if(alto < analogRead(A0)< max) // le hablan alto EXCLUSIVAMENTE a nene 
-          {
-              flag = false;
-              nenes.b_alto();
-            
-            }//end if alto a nene
-      
+          {   flag = false;
+              nenes.b_alto();}//end if alto a nene
       }//end if ruido a nena-------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------
 ///      CUANDO NO HAY RUIDO --> LE HABLAN A LOS DOS    ///
-
-      //a la nena le hablan alto?
+      //¿a la nena le hablan alto?
       else if(alto < analogRead(A1)< max)
       {   flag = false;
           if(alto < analogRead(A0)< max)
           {//acciones AMBOS alto
-            nenes.ambos_alto();
-            }//le hablan alto al nene?
+            nenes.ambos_alto();}//le hablan alto al nene?
           else if(0 < analogRead(A0) < bajo)
           {nenes.ambos_g();//le hablan más alto a la nena, el se quiere incluir
-            } // le hablan bajo al nene?
-          
+            } // le hablan bajo al nene? 
         }//end if nena alta 
-
-        //a nena le hablan bajo?
+        //¿a nena le hablan bajo?
       else if(0 < analogRead(A1) < bajo)
-      {
-        flag = false;
+      { flag = false;
         if(alto < analogRead(A0)< max)
-          { nenes.ambos_b();
-            }//le hablan alto al nene?
-            
-          else if(0 < analogRead(A0) < bajo)
-          {nenes.ambos_bajo();
-            } // le hablan bajo al nene?
-        
-        }//end if hablan bajo a nena
+          { nenes.ambos_b();}//le hablan alto al nene?  
+        else if(0 < analogRead(A0) < bajo)
+          {nenes.ambos_bajo();} // le hablan bajo al nene?
+       }//end if hablan bajo a nena
 //////////////////////////////////////////////////////////////////////////////////////////
 //------------ ya pasó el tiempo necesario para empezar las secuencias??-----------------
 //veamos: lo sabremos con una flag que activará siempre esto
@@ -179,34 +143,20 @@ void loop() {
           //cálculos para el timer
           tiempo_prev = tiempo;
           tiempo = millis();
-          cont_s = cont_s + tiempo - tiempo_prev; //incrementa el conteo en delta
-          
+          cont_s = cont_s + tiempo - tiempo_prev; //incrementa el conteo en delta 
           if(last_s != s)
-          {
-              switch(s){
-              case 0:
-                nenes.baile();
-                break;
-              case 1:
-                nenes.lamento();
-                break;
-              case 2:
-                nenes.canto();
-                break;
-              }//end switch s
+          { switch(s){case 0: nenes.baile();   break;
+                      case 1: nenes.lamento(); break;
+                      case 2: nenes.canto();   break;}//end switch s
             }// end if last_s
 
           if(cont_s >= 30000)//el límite debe de ser la duración del audio + 30 segundos
-          {
-            //ahora se cambia la secuencia
+          {//ahora se cambia la secuencia
             Serial.println("cambio de secuencia");
-            s = random(0,2);
+            s = random(0,2);//elegir una secuencia 1.-baile  2.-lamento  3.-canto 
             Serial.println(s);
-            cont_s = 0;
-            }
-            
+            cont_s = 0;}
           last_s = s;
-        //elegir una secuencia 1.-baile  2.-lamento  3.-canto 
        }//end if flag true --> que el contador ya llegó al limite
  /////////////////////////////////////////////////////////////////////////////////////////
     }// en up==true
