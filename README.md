@@ -9,7 +9,7 @@ La bella ciudad de Puebla, cuna de múltiples e impresionantes leyendas, alberga
 <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
   height="100%"/>
 
-__LA FUENTE DE LOS MUÑECOS__
+## ***La fuente de los muñecos***
 <p align="justify">
 En el que hoy es conocido como barrio de Xonaca, antaño llamado "Barrio de los catrines", debido a que la gente adinerada del centro del país construía sus fincas.
 Frente a la iglesia de La Candelaria, se encontraba una casona,la cual fue ocupada por la emperatriz Carlota, esposa de Maximiliano de Habsburgo. En dicha casona Maximinio Ávila Camacho, ex-gobernador de Puebla y hermano del expresidente Manuel Ávila Camacho, construyó su casa de verano.
@@ -45,6 +45,9 @@ De igual manera, la reacción de los muñecos será a través de movimiento, don
 <p align="justify">
 En este apartado se decriben los circuitos implementados para el funcionamiento de los animatrónicos, asi como las adecuaciones tecnicas pertinentes para adecuerlo a las necesidades requeridas.</p>
 
+<p align="justify">
+En primera instancia, se ocuparon de dos circuitos de amplificación con filtrado para la voz de los animatrónicos, ya que necesitábamos que fueran lo más claros y posibles, con potencia suficiente para que se escucharan a cierta distancia. Posterior a ello, se requirió de un circuito que controlara los servomotores y que estos realizaran la labor del movimiento de quijada y cabeza, al mismo tiempo que estos hablaban.</p>
+
 ![Circuito amplificador](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/4f598ded-af15-4841-99ba-1e9054e95909)
 
 ![2](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/710536d2-34ef-4c8f-bbf4-9ae741a398ac)
@@ -60,18 +63,35 @@ En este apartado se decriben los circuitos implementados para el funcionamiento 
 
 **_Construcción de los muñecos_**
 
+
 <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
   height="100%"/>
   
 ## EVIDENCIAS.
 
-![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/ac7fad7c-0b0e-44c8-935f-2aaac7ba4942)
+<p align="justify">
+<figure>
+  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/e592b361-e638-42d4-ba4a-2e542bcb2edb"/></p>
+  <figcaption> circuito de reproducción de audio.</figcaption>
+</figure>
 
-![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/e592b361-e638-42d4-ba4a-2e542bcb2edb)
 
-![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/961bb3e5-4920-4a95-888d-2b5784c8ca0b)
+<p align="justify">
+<figure>
+  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/961bb3e5-4920-4a95-888d-2b5784c8ca0b"/></p>
+  <figcaption> circuito de servomotor controlado por micrófono.</figcaption>
+</figure>
 
-![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/bd59a6ca-a73b-49d9-92c8-8ab126f9c04f)
+  
+<p align="justify">
+<figure>
+  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/bd59a6ca-a73b-49d9-92c8-8ab126f9c04f"/></p>
+  <figcaption>Impresión de mandibula.</figcaption>
+</figure>
 
- 
 
+<p align="center">
+<figure>
+    <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/93f09457-6ce6-49e3-8455-ece9f894928a"/></p>
+  <figcaption> Corte de piezas del cuerpo. </figcaption>
+</figure>
