@@ -103,7 +103,11 @@ En el caso del niño se realizó el diseño en SolidWorks de un mecanismo que le
 Como se puede observar en la imagen anterior se llevaron a cabo algunos ajustes para que el mecanismo cumpliera con las especificaciones de movimiento requeridas.</p>
 
 <p align="justify">
-Para el escenario, se tomó en cuenta unas dimensiones del pozo de 60cm de diámetro, la decoración de este se realizó completamente a mano para darle más detalle. En el caso de la talavera se usaron moldes para posteriormente usarlo al momento de pintar el </p>
+Para el escenario, se tomó en cuenta unas dimensiones del pozo de 60cm de diámetro, la decoración de este se realizó completamente a mano para darle más detalle. En el caso de la talavera se usaron moldes para posteriormente usarlo al momento de pintarlo </p>
+
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/8da9cf67-a834-4f49-83af-a6dc04b29c32)
+>Molde de talavera.
+
 
 
 
