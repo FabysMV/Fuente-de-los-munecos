@@ -69,8 +69,11 @@ En primera instancia, se ocuparon de dos circuitos de amplificación con filtrad
 ![Circuito amplificador](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/4f598ded-af15-4841-99ba-1e9054e95909)
 
 ![2](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/710536d2-34ef-4c8f-bbf4-9ae741a398ac)
+>Circuitos amplificadores.
 
 ![servos](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/dacdbc3f-c55e-4eed-bd40-7d0c728a11ca)
+>Curcuito controlador de servomotores a través de micrófono.
+
 
 
 
