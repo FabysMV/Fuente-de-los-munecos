@@ -86,6 +86,13 @@ En primera instancia, se ocuparon de dos circuitos de amplificación con filtrad
 <p align="justify">
 La elaboración de cada animatronico se basa en una estructura de CPVC, con la cual se da forma al cuerpo. de igual manera, para las uniones de las extremidades se utilizaron codos de CPVC. En general, cada muñeco cuenta con unas dimensiondes de 90cm de altura por 30cm de ancho, lo cual resulta conveniente para las dimensiones del escenario.</p>
 
+![Diseño prelimilar muñecos](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/44503edb-7624-40fe-b8d6-a22f6f5d88d6)
+>diseño preliminar de los animatrónicos.
+
+<p align="justify">
+En el caso del niño se realizó el diseño en CATIA de un mecanismo que le permitiera abrir y cerrar la mandibula, lo que posteriormente se llevó a imprimir 3D para montarlo en la cabeza. cabe destacar que ambos muñecos tienen movimiento horizontal de sus cabezas.</p>
+
+
 
 
  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
