@@ -108,9 +108,15 @@ Para el escenario, se tomó en cuenta unas dimensiones del pozo de 60cm de diám
 ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/8da9cf67-a834-4f49-83af-a6dc04b29c32)
 >Molde de talavera.
 
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/b7d150d5-848d-4a8f-a998-eabe4f967d54)
+>Proceso de pintado del pozo
 
+<p align="justify">
+La construcción de las cabezas se llevó haciendo la estructura con periódico y engrudo, tal cual como si se estuviera contruyendo una piñata, esto, con el objetivo de hacer el animatrónico mas ligero y se le pueda dar forma a la cabeza de forma mas fácil.
 
+Finalmente, para decoración del escenario se realizaron flores de decoración para poner alrededor del escenario y tenga mas vista y a la vez haga armonía con el resto de componentes del entorno y darle toques representativos y tipicos de la temporada.</p>
 
+  
  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
 ## EVIDENCIAS.
