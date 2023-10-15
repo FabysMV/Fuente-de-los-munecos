@@ -60,6 +60,7 @@ En este apartado se decriben los circuitos implementados para el funcionamiento 
 
 **_Construcción de los muñecos_**
 
+
 <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
   height="100%"/>
   
@@ -73,5 +74,6 @@ En este apartado se decriben los circuitos implementados para el funcionamiento 
 
 ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/bd59a6ca-a73b-49d9-92c8-8ab126f9c04f)
 
- 
+ ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/93f09457-6ce6-49e3-8455-ece9f894928a)
+
 
