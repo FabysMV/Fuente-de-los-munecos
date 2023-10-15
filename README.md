@@ -32,6 +32,8 @@ El presente proyecto consiste en el desarrollo de dos animatrónicas, un niño y
 De igual manera, la reacción de los muñecos será a través de movimiento, donde cada frecuencia de voz envía una señal diferente a los servomotores para que estos ejecuten una secuencia de movimientos predeterminados.
 
 ## PROCESO DE ELABORACIÓN.
+>[!NOTE]
+>Sección técnica, proceder con cuidado
 
 ![Circuito amplificador](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/4f598ded-af15-4841-99ba-1e9054e95909)
 
