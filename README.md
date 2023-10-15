@@ -19,5 +19,5 @@ Con un gran pesar se dedujó que habían caído en un pozo de agua cercano a la 
 La pequeña niña de rostro pálido, con un libro debajo de su brazo derecho, porta un vestido amarillo con olanes, en su cabello dos largas trenzas que adornan sus hombros, extiende su brazo izquierdo con delicadeza y rodea al niño, su hermano, vestido con una camisa verde y un overol. 
 
 Desde esa fecha e incluso ahora, los habitantes del barrio de Xonaca cuentan como por las noches,las figuras de los dos hermanitos cobran vida, salen a jugar, divertirse, sus risas llenas de júbilo resuenan por todo el barrio hasta que los primeros rayos que acompañan al amanecer aparecen. Es entonces cuando vuelven a su pedestal, para volver a quedar pretrificados, esperando a que la noche caiga una vez más y así poder volver a jugar una noche más...
-
+  ![Fuente de los muñecos en el barrio de Xonaca](https://github.com/FabysMV/Fuente-de-los-munecos/blob/7b09bb53ef8141561e2ab438184908cd7aae595c/Im%C3%A1genes/Fuente_mu%C3%B1eco.png)
 
