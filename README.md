@@ -90,8 +90,10 @@ La elaboración de cada animatronico se basa en una estructura de CPVC, con la c
 >diseño preliminar de los animatrónicos.
 
 <p align="justify">
-En el caso del niño se realizó el diseño en CATIA de un mecanismo que le permitiera abrir y cerrar la mandibula, lo que posteriormente se llevó a imprimir 3D para montarlo en la cabeza. cabe destacar que ambos muñecos tienen movimiento horizontal de sus cabezas.</p>
+En el caso del niño se realizó el diseño en SolidWorks de un mecanismo que le permitiera abrir y cerrar la mandibula, lo que posteriormente se llevó a imprimir 3D para montarlo en la cabeza. cabe destacar que ambos muñecos tienen movimiento horizontal de sus cabezas.</p>
 
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/72456376-9fee-4d4a-abcd-db760ba1be0f)
+>Diseño de la mandíbula.
 
 ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/ba1786ad-cba7-4a77-8d9d-469d866862e9)
 >Adecuacion del mecanismo de la mandíbula.
