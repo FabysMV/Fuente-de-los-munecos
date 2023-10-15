@@ -20,7 +20,7 @@ La pequeña niña de rostro pálido, con un libro debajo de su brazo derecho, po
 
 Desde esa fecha e incluso ahora, los habitantes del barrio de Xonaca cuentan como por las noches,las figuras de los dos hermanitos cobran vida, salen a jugar, divertirse, sus risas llenas de júbilo resuenan por todo el barrio hasta que los primeros rayos que acompañan al amanecer aparecen. Es entonces cuando vuelven a su pedestal, para volver a quedar pretrificados, esperando a que la noche caiga una vez más y así poder volver a jugar una noche más...
 
-<div style="text-align:center"> ![Fuente de los muñecos en el barrio de Xonaca](https://github.com/FabysMV/Fuente-de-los-munecos/blob/7b09bb53ef8141561e2ab438184908cd7aae595c/Im%C3%A1genes/Fuente_mu%C3%B1eco.png)
+![Fuente de los muñecos en el barrio de Xonaca](https://github.com/FabysMV/Fuente-de-los-munecos/blob/7b09bb53ef8141561e2ab438184908cd7aae595c/Im%C3%A1genes/Fuente_mu%C3%B1eco.png)
 
 ## DESCRIPCIÓN DE LOS ANIMATRÓNICOS.
 
@@ -28,5 +28,16 @@ El presente proyecto consiste en el desarrollo de dos animatrónicas, un niño y
 
 De igual manera, la reacción de los muñecos será a través de movimiento, donde cada frecuencia de voz envía una señal diferente a los servomotores para que estos ejecuten una secuencia de movimientos predeterminados.
 
-<div style="text-align:center"> ![Circuito amplificador](![Imagen de WhatsApp 2023-10-14 a las 00 23 15_6c7d18b8](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/9a1a9746-3948-42d3-9de1-0fe58a078cb2)
+## PROCESO DE ELABORACIÓN.
+
+![Circuito amplificador](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/4f598ded-af15-4841-99ba-1e9054e95909)
+
+![2](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/710536d2-34ef-4c8f-bbf4-9ae741a398ac)
+
+![servos](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/dacdbc3f-c55e-4eed-bd40-7d0c728a11ca)
+
+
+
+
+
 
