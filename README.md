@@ -120,13 +120,11 @@ Finalmente, para decoración del escenario se realizaron flores de decoración p
   >Trenzas de la muñeca.
 
   ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/621f1a9b-2776-457d-8e0c-fd2f525328c4)
-  >Girnaldas de decoración.
+  >Guirnaldas de decoración.
 
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/85769107-3184-403e-880e-166f19280159)
+>Decoración de flor de Cempasuchil.
 
-
-
-
-  
 
  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
