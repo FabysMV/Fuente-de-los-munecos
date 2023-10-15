@@ -112,11 +112,18 @@ Para el escenario, se tomó en cuenta unas dimensiones del pozo de 60cm de diám
 >Proceso de pintado del pozo
 
 <p align="justify">
-La construcción de las cabezas se llevó haciendo la estructura con periódico y engrudo, tal cual como si se estuviera contruyendo una piñata, esto, con el objetivo de hacer el animatrónico mas ligero y se le pueda dar forma a la cabeza de forma mas fácil.
+La construcción de las cabezas se llevó haciendo la estructura con periódico y engrudo, tal cual como si se estuviera contruyendo una piñata, esto, con el objetivo de hacer el animatrónico mas ligero y se le pueda dar forma a la cabeza de forma mas fácil. el cabello de ambos muñecos fue hecho de estanbre y peinado para darle mas detalle.
 
 Finalmente, para decoración del escenario se realizaron flores de decoración para poner alrededor del escenario y tenga mas vista y a la vez haga armonía con el resto de componentes del entorno y darle toques representativos y tipicos de la temporada.</p>
 
   ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/9c047262-ebbb-4115-897c-fb77b75055e4)
+  >Trenzas de la muñeca.
+
+  ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/621f1a9b-2776-457d-8e0c-fd2f525328c4)
+  >Girnaldas de decoración.
+
+
+
 
 
   
