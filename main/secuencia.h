@@ -15,7 +15,10 @@ TMRpcm Audio;   // Se crea un objeto para usar las funciones de la libreria TMRp
 #include "motor_mov.h"
 motor_mov girl;
 motor_mov boy;
-
+int rapidez = 200; //rapidez con la que hace la negación en milisegundos
+//PINES DE LOS MOTORES
+int m_g = 12;
+int m_b = 13;
 ///////////////////////////////////////////////////////////////////////
 class accion{
   
@@ -67,19 +70,19 @@ class accion{
   {
       Serial.println("Niña alto");
       delay(2000);
-      girl.izq(); //gira a la izquierda
-      boy.neutro(n_b);
+      girl.izq(m_g); //gira a la izquierda
+      boy.neutro(n_b, m_b);
       Audio.play("Susurros.wav"); //!!importante llamar así el audio
       do{Serial.println("susurros");}while(Audio.isPlaying()==1);
-      girl.neutro(n_g);
-      boy.derecha(); //voltea a ver a su hermana
+      girl.neutro(n_g, m_g);
+      boy.derecha(m_b); //voltea a ver a su hermana
       delay(1000);  //espera 1 segundo
       //podemos tener otros posibles, por mientras solo 1
       Audio.play("Por_ella1.wav");
       do{Serial.println("Por ella");  
-         boy.speak();}while(Audio.isPlaying()==1); //secuencia solo mientras habla
-      boy.neutro(n_b);//regresa a posición inicial
-      girl.neutro(n_g);
+         boy.speak(m_b);}while(Audio.isPlaying()==1); //secuencia solo mientras habla
+      boy.neutro(n_b, m_b);//regresa a posición inicial
+      girl.neutro(n_g, m_g);
     }///Niña se voltea y le habla a su hermano, él responde por ella
 
 
@@ -87,14 +90,14 @@ class accion{
   {
       Serial.println("Niña bajo");
       delay(2000);
-      girl.derecha();
+      girl.derecha(m_g);
       delay(500);
-      boy.derecha();
+      boy.derecha(m_b);
       Audio.play("Yo_igual.wav");
       do{Serial.println("Yo igual");  
          }while(Audio.isPlaying()==1);
-      boy.neutro(n_b);//regresa a posición inicial
-      girl.neutro(n_g);
+      boy.neutro(n_b, m_b);//regresa a posición inicial
+      girl.neutro(n_g, m_g);
     } // El hermano se intriga por lo que andan susurrando
 
     
@@ -103,8 +106,8 @@ class accion{
       int aleatorio;
       Serial.println("Niño alto");
       delay(2000);
-      girl.derecha();
-      boy.derecha();
+      girl.derecha(m_g);
+      boy.derecha(m_b);
 
       aleatorio = random(1,3);
       switch(aleatorio)
@@ -113,11 +116,11 @@ class accion{
         case 3: Audio.play("funfact3.wav"); break;}
       
       do{Serial.println("funfact"); 
-          girl.izq(); 
-          boy.secuencia();
+          girl.izq(m_g); 
+          boy.secuencia(m_b);
          }while(Audio.isPlaying()==1);
-      boy.neutro(n_b);//regresa a posición inicial
-      girl.neutro(n_g);
+      boy.neutro(n_b, m_b);//regresa a posición inicial
+      girl.neutro(n_g, m_g);
       
     } //El hermano da algún dato curioso sobre ellos
 
@@ -126,54 +129,91 @@ class accion{
   {
       Serial.println("Niño bajo");
       delay(2000);
-      boy.derecha();
+      boy.derecha(m_b);
       delay(1000);
-      boy.izq();
+      boy.izq(m_b);
       Audio.play("ella_no_oye.wav");
       do{Serial.println("ella no escuchó"); 
             
            }while(Audio.isPlaying()==1);
-       boy.neutro(n_b);//regresa a posición inicial
-       girl.neutro(n_g);
+       boy.neutro(n_b, m_b);//regresa a posición inicial
+       girl.neutro(n_g, m_g);
     } //Voltea a ver a su hermana y piden que hablen más fuerte que ella no escuchó
 
 
   void ambos_alto()
   {
       Serial.println("Ambos alto");
-      girl.derecha();
-      boy.izq();
-      delay(500);
-      girl.izq();
-      boy.derecha();
-      delay(1000);
-      boy.neutro(n_b);//regresa a posición inicial
-      girl.neutro(n_g);
-      Audio.play("felices.wav");
-      do{Serial.println("estamos felices"); 
-            
-           }while(Audio.isPlaying()==1);
       delay(2000);
+      girl.derecha(m_g);
+      boy.izq(m_b);
+      delay(500);
+      girl.izq(m_g);
+      boy.derecha(m_b);
+      delay(1000);
+      boy.neutro(n_b, m_b);//regresa a posición inicial
+      girl.neutro(n_g, m_g);
+      Audio.play("felices.wav");
+      do{Serial.println("estamos felices");}while(Audio.isPlaying()==1);
+      
     } //Felices, dicen algún dato curioso
 
   void ambos_g()
   {
-    Serial.println("Ambos, pero niña más alto");
-    delay(2000);
+      Serial.println("Ambos, pero niña más alto");
+      delay(2000);
+      boy.derecha(m_b);
+      delay(500);
+      girl.izq(m_g);
+      delay(500);
+      Audio.play("no_oigo.wav");
+      do{Serial.println("yo también quiero escuchar"); 
+              boy.no(m_b, rapidez);
+             }while(Audio.isPlaying()==1);
+      boy.neutro(n_b, m_b);//regresa a posición inicial
+        girl.neutro(n_g, m_g);
     } //Voltea a ver a su izquierda, después a su hermana y se queja de que no escuchó bien
-
+    
     
   void ambos_b()
   {
-    Serial.println("Ambos, pero niño más alto");
-    delay(2000);
-    } //Voltea a ver a su hermana, después voltea a ver a quien le habló y le dice un dato curioso.
+      int aleatorio;
+      Serial.println("Ambos, pero niño más alto");
+      delay(2000);
+//      /---
+      boy.derecha(m_b);
+      delay(1000);
+      boy.izq(m_b);
+      girl.izq(m_g);
+      aleatorio = random(1,3);
+      switch(aleatorio)
+      { case 1: Audio.play("funfact1.wav"); break;
+        case 2: Audio.play("funfact2.wav"); break;
+        case 3: Audio.play("funfact3.wav"); break;}
+      
+      do{Serial.println("funfact"); 
+          girl.secuencia2(m_g); 
+          boy.secuencia(m_b);
+         }while(Audio.isPlaying()==1);
+      boy.neutro(n_b, m_b);//regresa a posición inicial
+      girl.neutro(n_g, m_g);
+     } //Voltea a ver a su hermana, después voltea a ver a quien le habló y le dice un dato curioso.
 
     
   void ambos_bajo()
   {
     Serial.println("Ambos bajo");
     delay(2000);
+
+    boy.derecha(m_b);
+    girl.izq(m_g);
+    delay(1500);
+    Audio.play("susurro_feliz.wav");
+    do{Serial.println("susurro feliz"); 
+          
+         }while(Audio.isPlaying()==1);
+     boy.neutro(n_b, m_b);//regresa a posición inicial
+     girl.neutro(n_g, m_g);
     } //Los dos hermanos se voltean a ver, y dicen que están felices
 
   };
