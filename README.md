@@ -105,6 +105,7 @@ En primera instancia, se ocuparon de dos circuitos de amplificación con filtrad
   <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/bd59a6ca-a73b-49d9-92c8-8ab126f9c04f"/></p>
  
 </figure>
+
 >Impresión de mandibula.
 
 
