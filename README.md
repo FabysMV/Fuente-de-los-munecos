@@ -1,4 +1,4 @@
-# Fuente-de-los-muñecos
+# Fuente de los muñecos
 <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
   height="100%"/>
 >[!NOTE]
@@ -27,10 +27,11 @@ Un trágico día de lluvias torrenciales, el par de niños salió con rumbo a la
 Al caer la tarde, y debido a su ausencia el padre dió la noticia, junto con los vecinos salieron en busca de los hermanos.<br>
   
 Con un gran pesar se dedujo que habían caído en un pozo de agua cercano a la propiedad del gobernador Ávila Camacho. Los cuerpos de los hermanos <b>nunca fueron encontrados</b>. Al enterarse de la noticia, el gobernador, quien estimaba mucho a su caballerango, mandó a construir una fuente, entre las que hoy son las calles 22 Oriente y 18 Norte, con azulejos de talavera y un pedestal con la figura de dos niños.
-La pequeña niña de rostro pálido, con un libro debajo de su brazo derecho, porta un vestido amarillo con olanes, en su cabello dos largas trenzas que adornan sus hombros, extiende su brazo izquierdo con delicadeza y rodea al niño, su hermano, vestido con una camisa verde y un overol. 
+La pequeña niña de rostro pálido, con un libro debajo de su brazo derecho, porta un vestido con olanes, en su cabello dos largas trenzas que adornan sus hombros, extiende su brazo izquierdo con delicadeza y rodea al niño, su hermano, vestido con una camisa verde y un overol. 
 <br> <br>
 <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/pozo.png" width="100%"
   height="100%"/>
+<p align="justify">
 Desde esa fecha e incluso ahora, los habitantes del barrio de Xonaca cuentan como por las noches,las figuras de los dos hermanitos cobran vida, salen a jugar, divertirse, sus risas llenas de júbilo resuenan por todo el barrio hasta que los primeros rayos que acompañan al amanecer aparecen. Es entonces cuando vuelven a su pedestal, para volver a quedar pretrificados, esperando a que la noche caiga una vez más y así poder volver a jugar una noche más.</p>
 
 <div>
@@ -41,9 +42,11 @@ Desde esa fecha e incluso ahora, los habitantes del barrio de Xonaca cuentan com
 
 ## ¿Qué hacen los muñecos?
 <p align="justify">
-El presente proyecto consiste en el desarrollo de dos animatrónicas, un niño y una niña, los cuales interactuarán con el público. Para esto, se utiliza un control a través de voz que detecta la intensidad con la que se les habla a los muñecos de la fuente. Éstos reaccionarán de diferente forma dependiendo de cómo se realice la comunicación con ellos.
+El presente proyecto consiste en el desarrollo de dos animatrónicos, un niño y una niña, los cuales interactuarán con el público. Para esto, se utiliza un control a través de voz que detecta la intensidad con la que se les habla a los muñecos de la fuente. Éstos reaccionarán de diferente forma dependiendo de cómo se realice la comunicación con ellos.
 
 De igual manera, la reacción de los muñecos será a través de movimiento, donde cada frecuencia de voz envía una señal diferente a los servomotores para que estos ejecuten una secuencia de movimientos predeterminados.</p>
+
+En la siguiente tabla se explica las reacciones que tendrán los muñecos para las diferentes intensidades que sean detectadas.
 
 
 <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
@@ -96,8 +99,9 @@ En primera instancia, se ocuparon de dos circuitos de amplificación con filtrad
 <p align="justify">
 <figure>
   <img src="https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/bd59a6ca-a73b-49d9-92c8-8ab126f9c04f"/></p>
-  <figcaption>Impresión de mandibula.</figcaption>
+ 
 </figure>
+>Impresión de mandibula.
 
 
 <p align="center">
