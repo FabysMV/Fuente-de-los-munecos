@@ -45,6 +45,9 @@ De igual manera, la reacción de los muñecos será a través de movimiento, don
 <p align="justify">
 En este apartado se decriben los circuitos implementados para el funcionamiento de los animatrónicos, asi como las adecuaciones tecnicas pertinentes para adecuerlo a las necesidades requeridas.</p>
 
+<p align="justify">
+En primera instancia, se ocuparon de dos circuitos de amplificación con filtrado para la voz de los animatrónicos, ya que necesitábamos que fueran lo más claros y posibles, con potencia suficiente para que se escucharan a cierta distancia. Posterior a ello, se requirió de un circuito que controlara los servomotores y que estos realizaran la labor del movimiento de quijada y cabeza, al mismo tiempo que estos hablaban.</p>
+
 ![Circuito amplificador](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/4f598ded-af15-4841-99ba-1e9054e95909)
 
 ![2](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/710536d2-34ef-4c8f-bbf4-9ae741a398ac)
