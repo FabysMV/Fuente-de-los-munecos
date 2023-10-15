@@ -73,3 +73,27 @@ Por último, si ninguno de los dos bloques coincide con el evento, se procede co
        }//end if hablan bajo a nena
 ```
 
+Si los muñecos entran en stand by, se ejecutan las acciones predeterminadas. Se cancelará esta ejecución en cuanto se vuelva a detectar un sonido en los micrófonos.
+
+```ruby
+if(flag == true)
+      {
+          //cálculos para el timer
+          tiempo_prev = tiempo;
+          tiempo = millis();
+          cont_s = cont_s + tiempo - tiempo_prev; //incrementa el conteo en delta 
+          if(last_s != s)
+          { switch(s){case 0: nenes.baile();   break;
+                      case 1: nenes.lamento(); break;
+                      case 2: nenes.canto();   break;}//end switch s
+            }// end if last_s
+
+          if(cont_s >= 30000)//el límite debe de ser la duración del audio + 30 segundos
+          {//ahora se cambia la secuencia
+            Serial.println("cambio de secuencia");
+            s = random(0,2);//elegir una secuencia 1.-baile  2.-lamento  3.-canto 
+            Serial.println(s);
+            cont_s = 0;}
+          last_s = s;
+       }//end if flag true --> que el contador ya llegó al limite
+```
