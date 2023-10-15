@@ -2,10 +2,7 @@
 //PINES DE LOS MOTORES
 int m_g = 12;
 int m_b = 13;
-//posiciones iniciales de los niños
-//:: NOTA--> la niña está girada ligeramente hacia su hermano
-int pos_i_g = 0;
-  int pos_i_b = 0;
+
 
 class motor_mov{
   private:
@@ -18,7 +15,16 @@ class motor_mov{
       servo.attach(pin);
       }
 
+    void izq(){}
 
+    void neutro(int pos){}
+
+    void speak()
+    {
+      //Movimiento de 45° a la izquierda, después 90° a la derecha. 
+      }
+
+    void secuencia(){}
   
     
       

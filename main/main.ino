@@ -47,6 +47,8 @@ int in = 0; //para las veces que ha entrado en un ruido && ruido
 
 void setup() {
   Serial.begin(9600);
+  //inicializar audio
+  nenes.init_audio();
   //entradas--botones
   pinMode(b_Up, INPUT);
   pinMode(b_Sleep, INPUT);
