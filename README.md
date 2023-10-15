@@ -9,7 +9,7 @@ La bella ciudad de Puebla, cuna de múltiples e impresionantes leyendas, alberga
 <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
   height="100%"/>
 
-__LA FUENTE DE LOS MUÑECOS__
+## ***La fuente de los muñecos***
 <p align="justify">
 En el que hoy es conocido como barrio de Xonaca, antaño llamado "Barrio de los catrines", debido a que la gente adinerada del centro del país construía sus fincas.
 Frente a la iglesia de La Candelaria, se encontraba una casona,la cual fue ocupada por la emperatriz Carlota, esposa de Maximiliano de Habsburgo. En dicha casona Maximinio Ávila Camacho, ex-gobernador de Puebla y hermano del expresidente Manuel Ávila Camacho, construyó su casa de verano.
