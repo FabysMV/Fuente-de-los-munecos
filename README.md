@@ -11,14 +11,15 @@ Estructura que llevará <br>
 La bella __ciudad de Puebla__, cuna de múltiples e impresionantes leyendas, alberga entre sus calles, __misterios__ que han acompañado a sus habitantes con el pasar del tiempo: desde la epóca prehispánica, pasando por el México colonial, llegando a los albores del siglo pasado. <br>
 Los relatos que sus calles susurran son únicos y se viven aún en <i>tiempos modernos</i>.
 
-<img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/talavera.png" width="100%"
-  height="100%"/>
+
 
 ## ***La fuente de los muñecos*** 
+<img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/talavera.png" width="100%"
+  height="100%"/>
 <p align="justify">
 En el que hoy es conocido como barrio de Xonaca, antaño llamado <b><i>"Barrio de los catrines"</i></b>, debido a que la gente adinerada del centro del país construía sus fincas.
 Frente a la iglesia de La Candelaria, se encontraba una casona, la cual fue ocupada por la emperatriz Carlota, esposa de Maximiliano de Habsburgo. En dicha casona, Maximinio Ávila Camacho, ex-gobernador de Puebla y hermano del expresidente Manuel Ávila Camacho, construyó su casa de verano.<br> 
-  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/avila.jpg" width="100%"
+  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/avila.png" width="100%"
   height="100%"/>
 <p align="justify">
 Este inmueble lo cuidaba un caballerango, cuyo nombre se ha perdido ya entre las bocas de la gente que ha perpetuado esta historia. Dicho caballerango tenía dos hijos, <b>una niña y un niño</b>, de seis y siete años. Ambos niños eran muy queridos y apreciados por él y los habitantes del <i>barrio de los catrines</i>.
