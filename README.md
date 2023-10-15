@@ -7,6 +7,7 @@ Estructura que llevará <br>
 La bella ciudad de Puebla, cuna de múltiples e impresionantes leyendas, alberga entre sus calles misterios que han acompañado a sus habitantes al pasar del tiempo. Desde la epóca prehispánica, pasando por el méxico colonial, llegando a los albores del siglo pasado. Los relatos que sus calles susurran son únicos y se viven aún en tiempos modernos.
 
 __LA FUENTE DE LOS MUÑECOS__
+
 En el que hoy es conocido como barrio de Xonaca, antaño llamado "Barrio de los catrines", debido a que la gente adinerada del centro del país construía sus fincas.
 Frente a la iglesia de La Candelaria, se encontraba una casona,la cual fue ocupada por la emperatriz Carlota, esposa de Maximiliano de Habsburgo. En dicha casona Maximinio Ávila Camacho, ex-gobernador de Puebla y hermano del expresidente Manuel Ávila Camacho, construyó su casa de verano.
 Este inmueble lo cuidaba un caballerango, cuyo nombre se ha perdido ya entre las bocas de la gente que ha perpetuado esta historia. Dicho caballerango tenía dos hijos, una niña y un niño, de seis y siete años. Ambos niños eran muy queridos y apreciados por él y los habitantes del Barrio de los catrines.
