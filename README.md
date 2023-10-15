@@ -69,9 +69,10 @@ En primera instancia, se ocuparon de dos circuitos de amplificación con filtrad
 ![Circuito amplificador](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/4f598ded-af15-4841-99ba-1e9054e95909)
 
 ![2](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/710536d2-34ef-4c8f-bbf4-9ae741a398ac)
+>Circuitos amplificadores.
 
 ![servos](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/dacdbc3f-c55e-4eed-bd40-7d0c728a11ca)
-
+>Curcuito controlador de servomotores a través de micrófono.
 
 
 **_Progamación_**
@@ -80,7 +81,8 @@ En primera instancia, se ocuparon de dos circuitos de amplificación con filtrad
 
 
 **_Construcción de los muñecos_**
-
+<p align="justify">
+La elaboración de cada animatronico se basa en una estructura de CPVC, con la cual se da forma al cuerpo. de igual manera, para las uniones de las extremidades se utilizaron codos de CPVC. En general, cada muñeco cuenta con unas dimensiondes de 90cm de altura por 30cm de ancho, lo cual resulta conveniente para las dimensiones del escenario.</p>
 
  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
