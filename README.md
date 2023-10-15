@@ -41,7 +41,7 @@ Desde esa fecha e incluso ahora, los habitantes del barrio de Xonaca cuentan com
 ## **Integrantes del equipo.** 
 
 <p align="justify">
-El equipo esta conformado por alumnos de la carrera de Licenciatura en Ingeniería Mecatrónica de ovtavo y noveno semestre.</p>
+El equipo esta conformado por alumnos de la carrera de Licenciatura en Ingeniería Mecatrónica de octavo y noveno semestre.</p>
 
 | NOMBRE                         | SEMESTRE|
 |--------------------------------|---------|
