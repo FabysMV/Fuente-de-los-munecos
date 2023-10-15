@@ -48,7 +48,10 @@ De igual manera, la reacción de los muñecos será a través de movimiento, don
 
 En la siguiente tabla se explica las reacciones que tendrán los muñecos para las diferentes intensidades que sean detectadas.
 
+<img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tabla_accion.png" width="100%"
+  height="100%"/>
 
+Si nadie le habla a los muñecos, entrarán en un estado de <i>stand by</i> y harán diferentes acciones predeterminadas como cantar o mover sus cabezas.
  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
 ## PROCESO DE ELABORACIÓN.
@@ -77,9 +80,8 @@ En primera instancia, se ocuparon de dos circuitos de amplificación con filtrad
 **_Construcción de los muñecos_**
 
 
-<img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
+ <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
-  
 ## EVIDENCIAS.
 
 <p align="justify">
