@@ -23,17 +23,27 @@ La pequeña niña de rostro pálido, con un libro debajo de su brazo derecho, po
 <br>
 Desde esa fecha e incluso ahora, los habitantes del barrio de Xonaca cuentan como por las noches,las figuras de los dos hermanitos cobran vida, salen a jugar, divertirse, sus risas llenas de júbilo resuenan por todo el barrio hasta que los primeros rayos que acompañan al amanecer aparecen. Es entonces cuando vuelven a su pedestal, para volver a quedar pretrificados, esperando a que la noche caiga una vez más y así poder volver a jugar una noche más.</p>
 
-![Fuente de los muñecos en el barrio de Xonaca](https://github.com/FabysMV/Fuente-de-los-munecos/blob/7b09bb53ef8141561e2ab438184908cd7aae595c/Im%C3%A1genes/Fuente_mu%C3%B1eco.png)
+<div>
+<p style = 'text-align:center;'>
+  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/7b09bb53ef8141561e2ab438184908cd7aae595c/Im%C3%A1genes/Fuente_mu%C3%B1eco.png">
+</p>
+</div>
 
 ## DESCRIPCIÓN DE LOS ANIMATRÓNICOS.
-
+<p align="justify">
 El presente proyecto consiste en el desarrollo de dos animatrónicas, un niño y una niña, los cuales interactuarán con el público. Para esto, se utiliza un control a través de voz que detecta la intensidad con la que se les habla a los muñecos de la fuente. Éstos reaccionarán de diferente forma dependiendo de cómo se realice la comunicación con ellos.
 
-De igual manera, la reacción de los muñecos será a través de movimiento, donde cada frecuencia de voz envía una señal diferente a los servomotores para que estos ejecuten una secuencia de movimientos predeterminados.
+De igual manera, la reacción de los muñecos será a través de movimiento, donde cada frecuencia de voz envía una señal diferente a los servomotores para que estos ejecuten una secuencia de movimientos predeterminados.</p>
 
+
+<img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
+  height="100%"/>
 ## PROCESO DE ELABORACIÓN.
->[!WARNING]
->Sección técnica, proceder con cuidado
+
+**_Parte electrónica_**
+
+<p align="justify">
+En este apartado se decriben los circuitos implementados para el funcionamiento de los animatrónicos, asi como las adecuaciones tecnicas pertinentes para adecuerlo a las necesidades requeridas.</p>
 
 ![Circuito amplificador](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/4f598ded-af15-4841-99ba-1e9054e95909)
 
@@ -43,6 +53,25 @@ De igual manera, la reacción de los muñecos será a través de movimiento, don
 
 
 
+**_Progamación_**
 
 
+
+
+**_Construcción de los muñecos_**
+
+<img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
+  height="100%"/>
+  
+## EVIDENCIAS.
+
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/ac7fad7c-0b0e-44c8-935f-2aaac7ba4942)
+
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/e592b361-e638-42d4-ba4a-2e542bcb2edb)
+
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/961bb3e5-4920-4a95-888d-2b5784c8ca0b)
+
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/bd59a6ca-a73b-49d9-92c8-8ab126f9c04f)
+
+ 
 
