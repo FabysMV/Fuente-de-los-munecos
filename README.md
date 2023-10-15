@@ -83,6 +83,9 @@ En primera instancia, se ocuparon de dos circuitos de amplificación con filtrad
 
 
 **_Construcción de los muñecos_**
+<p align="justify">
+La elaboración de cada animatronico se basa en una estructura de CPVC, con la cual se da forma al cuerpo. de igual manera, para las uniones de las extremidades se utilizaron codos de CPVC. En general, cada muñeco cuenta con unas dimensiondes de 90cm de altura por 30cm de ancho, lo cual resulta conveniente para las dimensiones del escenario.</p>
+
 
 
  <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
