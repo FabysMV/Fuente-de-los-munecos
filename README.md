@@ -223,6 +223,9 @@ Cada muñeco llevará una vestimenta acorde e inspirada en la leyenda, en el cas
 ![image](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Vestido%20ni%C3%B1a%20terminado.jpg)
 >Vestido niña terminado.
 
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Dise%C3%B1o%20molde%20overol.jpg)
+>Diseño del molde para overol de niño.
+
 ![image](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Overol%20ni%C3%B1o%20a%20medias.jpg)
 >Proceso de confección del overol.
 
