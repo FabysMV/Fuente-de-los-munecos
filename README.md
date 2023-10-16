@@ -52,6 +52,8 @@ El equipo esta conformado por alumnos de la carrera de Licenciatura en Ingenier�
 | Fátima Azuara Lim.             |    9°   | 
 | Manuel Alejandro Vargas Castro.|    8°   | 
 
+  
+  
   <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/tirita.png" width="100%"
   height="100%"/>
 ## ¿Qué hacen los muñecos?
@@ -169,7 +171,11 @@ Finalmente, para decoración del escenario se realizaron flores de decoración p
 ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/93f09457-6ce6-49e3-8455-ece9f894928a)
 >Corte de piezas del cuerpo.
 
+
 ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/2d95d010-23d4-4597-893b-3fb333e7e79b)
 >Ensamble de cabeza y cuerpo.
 
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/WhatsApp%20Image%202023-10-15%20at%2019.56.07.jpeg)
+>Programación del control de los sensores y motores
+>
 <div>
