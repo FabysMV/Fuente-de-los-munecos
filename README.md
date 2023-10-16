@@ -106,13 +106,13 @@ La elaboración de cada animatronico se basa en una estructura de CPVC, con la c
 <p align="justify">
 Cada muñeco llevará una vestimenta acorde e inspirada en la leyenda, en el caso de la niña será un vestido rosa con blanco, mientras que el niño usará un overol azul con blanco.</p>
 
-![Diseño de la vestimenta de la niña](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Dise%C3%B1o%20vestido%20ni%C3%B1a.jpeg).
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Dise%C3%B1o%20vestido%20ni%C3%B1a.jpeg).
 >diseño de la vestimenta de la niña.
 
-![Molde blusa vestido de la niña](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Molde%20blusa%20ni%C3%B1a.jpeg).
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Molde%20blusa%20ni%C3%B1a.jpeg).
 >Molde blusa vestido de la niña.
 
-![Blusa niña terminada](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Blusa%20ni%C3%B1a%20terminada.jpg).
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Blusa%20ni%C3%B1a%20terminada.jpg).
 >Blusa niña terminada.
 
 <p align="justify">
