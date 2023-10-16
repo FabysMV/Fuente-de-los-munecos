@@ -1,3 +1,5 @@
+<div style="border: 2px double #ff790d; padding: 10px;">
+  
 # Fuente de los muñecos
 <img src="https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Captura%20de%20pantalla%202023-10-14%20234701.png" width="100%"
   height="100%"/>
@@ -155,3 +157,5 @@ Finalmente, para decoración del escenario se realizaron flores de decoración p
 
 ![image](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/2d95d010-23d4-4597-893b-3fb333e7e79b)
 >Ensamble de cabeza y cuerpo.
+
+<div>
