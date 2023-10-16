@@ -220,6 +220,9 @@ Cada muñeco llevará una vestimenta acorde e inspirada en la leyenda, en el cas
 ![image](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Blusa%20ni%C3%B1a%20terminada.jpg)
 >Blusa niña terminada.
 
+![image](https://github.com/FabysMV/Fuente-de-los-munecos/blob/main/Im%C3%A1genes/Vestido%20ni%C3%B1a%20terminado.jpg)
+>Vestido niña terminado.
+
 <p align="justify">
 En el caso del niño se realizó el diseño en SolidWorks de un mecanismo que le permitiera abrir y cerrar la mandibula, lo que posteriormente se llevó a imprimir 3D para montarlo en la cabeza. Cabe destacar que ambos muñecos tienen movimiento horizontal de sus cabezas.</p>
 
