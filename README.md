@@ -78,7 +78,9 @@ En la siguiente tabla se explica las reacciones que tendrán los muñecos para l
 En este apartado se decriben los circuitos implementados para el funcionamiento de los animatrónicos, asi como las adecuaciones tecnicas pertinentes para adecuerlo a las necesidades requeridas.</p>
 
 <p align="justify">
-En primera instancia, se ocuparon de dos circuitos de amplificación con filtrado para la voz de los animatrónicos, ya que necesitábamos que fueran lo más claro posibles y con potencia suficiente para que se escucharan a cierta distancia. Posterior a ello, se requirió de un circuito que controlara los servomotores y que estos realizaran la labor del movimiento de quijada y cabeza, al mismo tiempo que estos hablaban, (esto junto a un arreglo de mecanismos y engranes).</p>
+En primera instancia, se ocuparon de dos circuitos de amplificación con filtrado para la voz de los animatrónicos, ya que necesitábamos que fueran lo más claro posibles y con potencia suficiente para que se escucharan a cierta distancia para lo cual nos ayudamos del OPAMP LM358 un dispositivo con el que, junto con un arreglo de capacitores (algunos de ellos se consiguieron lo más cercanos a los teóricos ya que algunos no existían comercialmente). Posterior a ello, se requirió de un circuito que controlaran los servomotores, aquí entra el famoso encapsulado CI 555, debido a su facilidad para la generación de pulsos, aplicación que utilizamos debido al tipo de señal que requieren los servo motores (PWM). Esto es de mucha importancia, ya que estos realizaran la labor del movimiento de quijada y cabeza, al mismo tiempo que estos hablan, (esto junto a un arreglo de mecanismos y engranes).
+
+</p>
 
 ![Circuito amplificador](https://github.com/FabysMV/Fuente-de-los-munecos/assets/147775106/4f598ded-af15-4841-99ba-1e9054e95909)
 
