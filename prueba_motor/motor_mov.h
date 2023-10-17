@@ -18,22 +18,24 @@ class motor_mov{
 
     void izq(int pin)
     {
-      servo.attach(pin);
+      ////servo.attach(pin);
       servo.write(0);
+      delay(15);
       }
 
     void derecha(int pin){
-      servo.attach(pin);
+      ////servo.attach(pin);
       servo.write(180);
+      delay(15);
       }
 
     void neutro(int pos, int pin){
-      servo.attach(pin);
+      //servo.attach(pin);
       servo.write(pos);}
 
     void speak(int pin)
     {
-      servo.attach(pin);
+      //servo.attach(pin);
       servo.write(45);
       delay(500);
       servo.write(90);
@@ -44,7 +46,7 @@ class motor_mov{
       }
 
     void secuencia(int pin, int rapidez){
-      servo.attach(pin);
+      //servo.attach(pin);
       for(int i = 0; i<=90; i++)
       {
         if(ang2 == false){pos_s1 = 44; pos_s1 ++;}
@@ -55,7 +57,7 @@ class motor_mov{
         }}
 
     void secuencia2(int pin,int rapidez, int inicio){
-      servo.attach(pin);
+      //servo.attach(pin);
       for(int i = 0; i<=90; i++)
       {
         if(ang3 == false){pos_s2 = inicio; pos_s2 ++;}
@@ -66,13 +68,14 @@ class motor_mov{
         }} //voltea a varios lados
 
     void no(int pin, int rapidez){
-      servo.attach(pin);
+      //servo.attach(pin);
       for(int i = 0; i<=90; i++)
       {
         if(ang == false){pos = 44; pos ++;}
         else{pos --;}
         if(pos>134){ang = true;}
         servo.write(ang);
+        delay(15);
         delay(rapidez);        
         };
         
