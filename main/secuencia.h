@@ -192,8 +192,8 @@ class accion{
         case 3: Audio.play("funfact3.wav"); break;}
       
       do{Serial.println("funfact"); 
-          girl.secuencia2(m_g); 
-          boy.secuencia(m_b);
+         /* girl.secuencia2(m_g); 
+          boy.secuencia(m_b);*/
          }while(Audio.isPlaying()==1);
       boy.neutro(n_b, m_b);//regresa a posición inicial
       girl.neutro(n_g, m_g);

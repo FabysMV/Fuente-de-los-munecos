@@ -15,7 +15,7 @@ void loop()
    mic_g.microfono(A1);
    mic_b.microfono(A0);
    Serial.print(mic_g.getVolts()); Serial.print("\t"); Serial.println(mic_b.getVolts());
-
+// Si detectó algo
    if(mic_g.getVolts() >= 3.0 || mic_b.getVolts() >= 3.0){
     Serial.println("detectado");
 
