@@ -1,15 +1,10 @@
-const int sensorPIN = A0;
-const int sampleWindow = 50; // Ancho ventana en mS (50 mS = 20Hz)
-int ancho = 0;
-int last_ancho = 0;
-int pico = 0;
-boolean check = false;
-unsigned long cont_sh = 0;
-unsigned long last_sh = 0;
-unsigned long time_sh = 0;
-int tiempo_silencio = 3000;
-double volts = 0;
-   
+#include "mic.h"
+mic mic_g;
+mic mic_b;
+int MicPin_g = A1;
+int MicPin_b = A0;
+
+
 void setup() 
 {
    Serial.begin(9600);
@@ -17,91 +12,40 @@ void setup()
 
 void loop() 
 {
-   microfono();
-   Serial.println(volts);
+   mic_g.microfono(A1);
+   mic_b.microfono(A0);
+   Serial.print(mic_g.getVolts()); Serial.print("\t"); Serial.println(mic_b.getVolts());
 
-   if(volts >= 3.0){
+   if(mic_g.getVolts() >= 3.0 || mic_b.getVolts() >= 3.0){
     Serial.println("detectado");
 
     check = true;
+    
+    mic_g.SetCheck();
+    mic_b.SetCheck(); //set check = true
+    
 
     do{
       Serial.println("MUESTRA");
-         microfono();
-      Serial.print("Volts: ");  Serial.print(volts);
-        if(volts >= 3.0){Serial.println("detectado alto?");
-          ancho++;
-          cont_sh = 0;
-          if(ancho > last_ancho){last_ancho = ancho;}    
-          }//voltaje alto
+      //vamos a tomar la muestra de ambos micrófonos
+      if (mic_g.getCheck() == true){mic_g.microfono(A1); Serial.print("Volts_g: ");  Serial.println(mic_g.getVolts());
+                                    mic_g.evaluar();} //lo hará mientras no haya terminado de contar
+      if (mic_b.getCheck() == true){mic_b.microfono(A0); Serial.print("Volts_b: ");  Serial.println(mic_b.getVolts());
+                                    mic_b.evaluar();}//lo hará mientras no haya terminado de contar
+         
+        //si uno termina de escuchar y su timer se desborda, ya no tomaremos la muestra, eso se logra con una variable booleana
+        if(mic_g.getCheck() == false && mic_b.getCheck() == false){check = false;}  //si AMBOS terminan de muestrear, entonces check cambia a estado FALSO
        
-      
-          else if(volts < 3.0)
-          {
-            if(ancho != 0)
-              {pico++; Serial.println("PICOOOO");}
-            //inicio contador
-            last_sh = time_sh;
-            time_sh = millis();
-            Serial.print("cont_sh: ");  Serial.println(cont_sh);
-            cont_sh = cont_sh + (time_sh - last_sh);
-            if(cont_sh >= tiempo_silencio){check = false; cont_sh = 0;}
-            ancho = 0;
-              
-            }//voltaje bajo
+      }while(check == true); //si check cambia a falso, salimos del ciclo
 
-      }while(check == true);
+      
       // evaluación de lo escuchado
-      
-      Serial.print("picos: ");  Serial.println(pico);
-      Serial.print("ancho: ");  Serial.println(last_ancho);
-      if(last_ancho >=10){Serial.println("ALTO");}
-      else if (1 <= last_ancho < 10 )
-        {
-          if(pico >= 1){Serial.println("susurro");}
-          }
-
-      if (last_ancho < 3)
-      {Serial.println("NADA");}
-      
-
-      //reseteamos valores
-      pico = 0;
-      last_ancho = 0;
-      ancho = 0;
+     mic_g.SetState();
+     mic_b.SetState();
    }
-      
-      
+
+   Serial.print("Estado niña: ");  Serial.print(mic_g.getState()); Serial.print("\t"); Serial.print("Estado niño: "); Serial.println(mic_b.getState());
+
+     
     Serial.println("----------------------------------");    
 }
-
-
-void microfono(){
-  unsigned long startMillis= millis();
-  unsigned int signalMax = 0;
-   unsigned int signalMin = 1024;
-   
- 
-
-   // Recopilar durante la ventana
-   unsigned int sample;
-   while (millis() - startMillis < sampleWindow)
-   {
-      sample = analogRead(sensorPIN);
-      if (sample < 1024)
-      {
-         if (sample > signalMax)
-         {
-            signalMax = sample;  // Actualizar máximo
-         }
-         else if (sample < signalMin)
-         {
-            signalMin = sample;  // Actualizar mínimo
-         }
-      }
-   }
-   unsigned int peakToPeak = signalMax - signalMin;  // Amplitud del sonido
-  volts = (peakToPeak * 5.0) / 1024;  // Convertir a tensión
-  
-  
-  }

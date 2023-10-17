@@ -56,7 +56,7 @@ void loop()
       Serial.print("picos: ");  Serial.println(pico);
       Serial.print("ancho: ");  Serial.println(last_ancho);
       if(last_ancho >=10){Serial.println("ALTO");}
-      else if (1 <= last_ancho < 10 )
+      else if (2 <= last_ancho < 10 )
         {
           if(pico >= 1){Serial.println("susurro");}
           }
