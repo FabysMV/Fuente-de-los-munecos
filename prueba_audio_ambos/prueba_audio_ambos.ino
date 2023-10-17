@@ -3,7 +3,7 @@ mic mic_g;
 mic mic_b;
 int MicPin_g = A1;
 int MicPin_b = A0;
-
+boolean check = false;
 
 void setup() 
 {
@@ -30,6 +30,9 @@ void loop()
       //vamos a tomar la muestra de ambos micrófonos
       if (mic_g.getCheck() == true){mic_g.microfono(A1); Serial.print("Volts_g: ");  Serial.println(mic_g.getVolts());
                                     mic_g.evaluar();} //lo hará mientras no haya terminado de contar
+
+                                    Serial.println("***********************"); 
+                                    Serial.println("***********************"); 
       if (mic_b.getCheck() == true){mic_b.microfono(A0); Serial.print("Volts_b: ");  Serial.println(mic_b.getVolts());
                                     mic_b.evaluar();}//lo hará mientras no haya terminado de contar
          

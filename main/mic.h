@@ -1,6 +1,6 @@
 //const int sensorPIN = A0;
 const int sampleWindow = 50; // Ancho ventana en mS (50 mS = 20Hz)
-
+boolean check = false;
 unsigned long cont_sh = 0;
 unsigned long last_sh = 0;
 unsigned long time_sh = 0;

@@ -5,9 +5,12 @@
 //PINES que indican los pines de entrada ANALÓGICOS del micrófono
 //cambiar al numero de pin de A0---pin nene
 //                            A1---pin nena
-int bajo = 0; //limite de lo que considero bajo
-int alto = 0; // limite en donde empiezo a considerar que es alto
-int max = 255; //valor máximo al que llega el micrófono
+// Micrófonos
+#include "mic.h"
+mic mic_g;
+mic mic_b;
+int MicPin_g = A1;
+int MicPin_b = A0;
 //////////////////////////////////////////////////////////////////////
 //Variables de pines de botones y ESTADOS
 int b_Up;
@@ -38,11 +41,6 @@ unsigned long delta_sec = 0;
 int in = 0; //para las veces que ha entrado en un ruido && ruido
 
 //////////////////////////////////////////////////////////////////////////
-// Estados escuchando y automatico
-
-
-
-
 ////////////////////////////////////////////////////////////////////////
 
 void setup() {
@@ -84,10 +82,55 @@ void loop() {
   if(Up == true) //se ha apretado el botón que despierta a los niños
   {
     Serial.println("despierto!!");// Procedemos a revisar el estado el micrófono
-    Serial.println("revisando micrófonos...");
-    if(bajo<analogRead(A0)<alto) //el microfono de la nene tiene ruido?
+    
+    Serial.println("revisando micrófonos..."); /------------
+    mic_g.microfono(A1);
+    mic_b.microfono(A0);
+    Serial.print(mic_g.getVolts()); Serial.print("\t"); Serial.println(mic_b.getVolts());
+
+    //se ha detectado un sonido
+
+
+   if(mic_g.getVolts() >= 3.0 || mic_b.getVolts() >= 3.0){
+    Serial.println("detectado");
+
+    check = true;
+    
+    mic_g.SetCheck();
+    mic_b.SetCheck(); //set check = true
+    
+
+    do{
+      Serial.println("MUESTRA");
+      //vamos a tomar la muestra de ambos micrófonos
+      if (mic_g.getCheck() == true){mic_g.microfono(A1); Serial.print("Volts_g: ");  Serial.println(mic_g.getVolts());
+                                    mic_g.evaluar();} //lo hará mientras no haya terminado de contar
+
+                                    Serial.println("***********************"); 
+                                    Serial.println("***********************"); 
+      if (mic_b.getCheck() == true){mic_b.microfono(A0); Serial.print("Volts_b: ");  Serial.println(mic_b.getVolts());
+                                    mic_b.evaluar();}//lo hará mientras no haya terminado de contar
+         
+        //si uno termina de escuchar y su timer se desborda, ya no tomaremos la muestra, eso se logra con una variable booleana
+        if(mic_g.getCheck() == false && mic_b.getCheck() == false){check = false;}  //si AMBOS terminan de muestrear, entonces check cambia a estado FALSO
+       
+      }while(check == true); //si check cambia a falso, salimos del ciclo
+
+      
+      // evaluación de lo escuchado
+     mic_g.SetState();
+     mic_b.SetState();
+   }
+
+   Serial.print("Estado niña: ");  Serial.print(mic_g.getState()); Serial.print("\t"); Serial.print("Estado niño: "); Serial.println(mic_b.getState());
+
+     
+    Serial.println("----------------------------------"); 
+
+  //---- ASIGNACIÓN DE ACCIÓN POR ESTADOS ----  
+    if(mic_b.getState() == 'n') //el microfono del nene tiene ruido?
     {//---------------------------------------------------------------------------------- 
-          if(bajo<analogRead(A1)<alto) //tiene ruido la nena?
+          if(mic_g.getState() == 'n') //tiene ruido la nena?
           {//// COMIENZO O SIGO EL CONTEO//////////
             if(flag == false){in = 0;}
             if(in == 0){tiempo_set = millis();}
@@ -97,44 +140,45 @@ void loop() {
                                    tiempo_set = 0;}
             ////// NADA ////////////////////////////
             }//end if ruido nena
-          else if(0 < analogRead(A1) < bajo) // le hablan bajo EXCLUSIVAMENTE a la nena
+          else if(mic_g.getState() == 's') // le hablan bajo EXCLUSIVAMENTE a la nena
           { flag = false;
             nenes.g_bajo();}//end if bajo a nena
-          else if(alto < analogRead(A1)< max)
+          else if(mic_g.getState() == 'a')
           { flag = false;
             nenes.g_alto();}//end if alto a nena  
       }//end if ruido a nene-----------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-     else if(bajo<analogRead(A1)<alto) //el microfono de la nena tiene ruido?
+     else if(mic_g.getState() == 'n') //el microfono de la nena tiene ruido?
     {//---------------------------------------------------------------------------------- 
-          if(0 < analogRead(A0) < bajo) // le hablan bajo EXCLUSIVAMENTE a nene
+          if(mic_b.getState() == 's') // le hablan bajo EXCLUSIVAMENTE a nene
           { flag = false;
             nenes.b_bajo();}//end if bajo a nene
-          else if(alto < analogRead(A0)< max) // le hablan alto EXCLUSIVAMENTE a nene 
+          else if(mic_b.getState() == 'a') // le hablan alto EXCLUSIVAMENTE a nene 
           {   flag = false;
               nenes.b_alto();}//end if alto a nene
       }//end if ruido a nena-------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------
 ///      CUANDO NO HAY RUIDO --> LE HABLAN A LOS DOS    ///
       //¿a la nena le hablan alto?
-      else if(alto < analogRead(A1)< max)
+      else if(mic_g.getState() == 'a')
       {   flag = false;
-          if(alto < analogRead(A0)< max)
+          if(mic_b.getState() == 'a')
           {//acciones AMBOS alto
             nenes.ambos_alto();}//le hablan alto al nene?
-          else if(0 < analogRead(A0) < bajo)
+          else if(mic_b.getState() == 's')
           {nenes.ambos_g();//le hablan más alto a la nena, el se quiere incluir
             } // le hablan bajo al nene? 
         }//end if nena alta 
         //¿a nena le hablan bajo?
-      else if(0 < analogRead(A1) < bajo)
+      else if(mic_g.getState() == 's')
       { flag = false;
-        if(alto < analogRead(A0)< max)
+        if(mic_b.getState() == 'a')
           { nenes.ambos_b();}//le hablan alto al nene?  
-        else if(0 < analogRead(A0) < bajo)
+        else if(mic_b.getState() == 's')
           {nenes.ambos_bajo();} // le hablan bajo al nene?
        }//end if hablan bajo a nena
+       
 //////////////////////////////////////////////////////////////////////////////////////////
 //------------ ya pasó el tiempo necesario para empezar las secuencias??-----------------
 //veamos: lo sabremos con una flag que activará siempre esto
