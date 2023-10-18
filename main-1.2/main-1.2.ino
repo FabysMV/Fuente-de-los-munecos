@@ -11,6 +11,7 @@ mic mic_g;
 mic mic_b;
 int MicPin_g = A1;
 int MicPin_b = A0;
+boolean check = false;
 //////////////////////////////////////////////////////////////////////
 //Variables de pines de botones y ESTADOS
 int b_Up;
@@ -28,15 +29,16 @@ int Led_b = 2;
 accion nenes;
 // Variables para controlar las acciones, pra que no se haga un ciclo
 int s = 0; //secuencia que se va a realizar
-int last_s = 10; //ultima secuencia realizada
-boolean flag_s = false;
-unsigned long tiempo = 0;
-unsigned long tiempo_prev = 0;
-unsigned long cont_s = 0;
+//int last_s = 10; //ultima secuencia realizada
+//boolean flag_s = false;
+//unsigned long tiempo = 0;
+//unsigned long tiempo_prev = 0;
+//unsigned long cont_s = 0;
 ///////////////////////////////////////////////////////////////////////
 // Variables y cositas para el contador que iniciará la secuencia automática
 boolean flag = false;
-unsigned long tiempo_set = 0;
+unsigned long t_Sec = 0;
+unsigned long last_ts = 0;
 unsigned long delta_sec = 0;
 int in = 0; //para las veces que ha entrado en un ruido && ruido
 
@@ -87,7 +89,7 @@ void loop() {
   {
     Serial.println("despierto!!");// Procedemos a revisar el estado el micrófono
     
-    Serial.println("revisando micrófonos..."); /------------
+    Serial.println("revisando micrófonos...");// /------------
     mic_g.microfono(A1);
     mic_b.microfono(A0);
     Serial.print(mic_g.getVolts()); Serial.print("\t"); Serial.println(mic_b.getVolts());
@@ -125,6 +127,7 @@ void loop() {
      mic_g.SetState();
      mic_b.SetState();
    }
+   else{mic_g.none(); mic_b.none();}
 
    Serial.print("Estado niña: ");  Serial.print(mic_g.getState()); Serial.print("\t"); Serial.print("Estado niño: "); Serial.println(mic_b.getState());
 
@@ -136,12 +139,14 @@ void loop() {
     {//---------------------------------------------------------------------------------- 
           if(mic_g.getState() == 'n') //tiene ruido la nena?
           {//// COMIENZO O SIGO EL CONTEO//////////
-            if(flag == false){in = 0;}
-            if(in == 0){tiempo_set = millis();}
-            delta_sec = millis() - tiempo_set;
+            last_ts = t_Sec;
+            t_Sec = millis();
+            
+            delta_sec = delta_sec + (t_Sec - last_ts);
             in ++;
             if(delta_sec >= 60000){flag = true;
-                                   tiempo_set = 0;}
+                                   delta_sec = 0;}
+             Serial.print("**********"); Serial.print(delta_sec); Serial.println("**********");
             ////// NADA ////////////////////////////
             }//end if ruido nena
           else if(mic_g.getState() == 's') // le hablan bajo EXCLUSIVAMENTE a la nena
@@ -189,22 +194,22 @@ void loop() {
       if(flag == true)
       {
           //cálculos para el timer
-          tiempo_prev = tiempo;
+         /* tiempo_prev = tiempo;
           tiempo = millis();
-          cont_s = cont_s + tiempo - tiempo_prev; //incrementa el conteo en delta 
-          if(last_s != s)
-          { switch(s){case 0: nenes.baile();   break;
-                      case 1: nenes.lamento(); break;
-                      case 2: nenes.canto();   break;}//end switch s
-            }// end if last_s
-
-          if(cont_s >= 30000)//el límite debe de ser la duración del audio + 30 segundos
+          cont_s = cont_s + tiempo - tiempo_prev; //incrementa el conteo en delta */
+          switch(s){case 0: nenes.baile(); flag = false;
+                              Serial.println("acabe"); break;
+                      case 1: nenes.risa(); flag = false; break;
+                      case 2: nenes.canto();  flag = false; break;}//end switch s
+            
+          s = nenes.getS();
+         /* if(cont_s >= 30000)//el límite debe de ser la duración del audio + 30 segundos
           {//ahora se cambia la secuencia
             Serial.println("cambio de secuencia");
             s = random(0,2);//elegir una secuencia 1.-baile  2.-lamento  3.-canto 
             Serial.println(s);
             cont_s = 0;}
-          last_s = s;
+          last_s = s;*/
        }//end if flag true --> que el contador ya llegó al limite
  /////////////////////////////////////////////////////////////////////////////////////////
     }// en up==true

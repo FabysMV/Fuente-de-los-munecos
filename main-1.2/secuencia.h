@@ -36,6 +36,7 @@ class accion{
       //:: NOTA--> la niña está girada ligeramente hacia su hermano
       int n_g = 0;
       int n_b = 0;
+      int S = 0;
   public:
 
   void init_audio(){
@@ -55,21 +56,44 @@ class accion{
 
   /// secuencia para cuando no hay señal de microfono por 1 minuto ///
 
+  int getS(){return S;}
+  
   void baile()
   {
+    Audio.play("funfact.wav");  
+      
+      do{Serial.println("baile"); 
+         /* girl.secuencia2(m_g); 
+          boy.secuencia(m_b);*/
+         }while(Audio.isPlaying()==1);
     Serial.println("baile");
+    S = 1;
     }
 
 
-  void lamento()
+  void risa()
   {
+    Audio.play("funfact.wav");  
+      
+      do{Serial.println("RISA"); 
+         /* girl.secuencia2(m_g); 
+          boy.secuencia(m_b);*/
+         }while(Audio.isPlaying()==1);
     Serial.println("lamento");
+    S = 2;
     }
 
 
   void canto()
   {
+   Audio.play("funfact.wav");  
+      
+      do{Serial.println("CANTO"); 
+         /* girl.secuencia2(m_g); 
+          boy.secuencia(m_b);*/
+         }while(Audio.isPlaying()==1);
     Serial.println("canto");
+    S = 0;
     
     }
 
@@ -81,13 +105,19 @@ class accion{
       delay(2000);
       girl.izq(m_g); //gira a la izquierda
       boy.neutro(n_b, m_b);
-      Audio.play("Susurros.wav"); //!!importante llamar así el audio
+      //***************
+     // Audio.play("Susurros.wav"); //!!importante llamar así el audio
+     //***********************************
+     Audio.play("funfact.wav"); 
       do{Serial.println("susurros");}while(Audio.isPlaying()==1);
       girl.neutro(n_g, m_g);
       boy.derecha(m_b); //voltea a ver a su hermana
       delay(1000);  //espera 1 segundo
       //podemos tener otros posibles, por mientras solo 1
-      Audio.play("Por_ella1.wav");
+     //*******************************
+     // Audio.play("Por_ella1.wav");
+     //************************************
+     Audio.play("funfact.wav"); 
       do{Serial.println("Por ella");  
          boy.speak(m_b);}while(Audio.isPlaying()==1); //secuencia solo mientras habla
       boy.neutro(n_b, m_b);//regresa a posición inicial
@@ -102,7 +132,10 @@ class accion{
       girl.derecha(m_g);
       delay(500);
       boy.derecha(m_b);
-      Audio.play("Yo_igual.wav");
+      //**************************
+     // Audio.play("Yo_igual.wav");
+     //*************************************
+     Audio.play("funfact.wav"); 
       do{Serial.println("Yo igual");  
          }while(Audio.isPlaying()==1);
       boy.neutro(n_b, m_b);//regresa a posición inicial
@@ -117,16 +150,13 @@ class accion{
       delay(2000);
       girl.derecha(m_g);
       boy.derecha(m_b);
-
-      aleatorio = random(1,3);
-      switch(aleatorio)
-      { case 1: Audio.play("funfact1.wav"); break;
-        case 2: Audio.play("funfact2.wav"); break;
-        case 3: Audio.play("funfact3.wav"); break;}
-      
+      //***************************
+      //Audio.play("funfact1.wav"); 
+       //******************
+      Audio.play("funfact.wav"); 
       do{Serial.println("funfact"); 
           girl.izq(m_g); 
-          boy.secuencia(m_b);
+         // boy.secuencia(m_b);
          }while(Audio.isPlaying()==1);
       boy.neutro(n_b, m_b);//regresa a posición inicial
       girl.neutro(n_g, m_g);
@@ -141,7 +171,10 @@ class accion{
       boy.derecha(m_b);
       delay(1000);
       boy.izq(m_b);
-      Audio.play("ella_no_oye.wav");
+      //************************
+      //Audio.play("ella_no_oye.wav");
+      //*************************
+      Audio.play("funfact.wav"); 
       do{Serial.println("ella no escuchó"); 
             
            }while(Audio.isPlaying()==1);
@@ -162,7 +195,10 @@ class accion{
       delay(1000);
       boy.neutro(n_b, m_b);//regresa a posición inicial
       girl.neutro(n_g, m_g);
-      Audio.play("felices.wav");
+      //***************************
+      //Audio.play("felices.wav");
+      //*******************************
+      Audio.play("funfact.wav"); 
       do{Serial.println("estamos felices");}while(Audio.isPlaying()==1);
       
     } //Felices, dicen algún dato curioso
@@ -175,7 +211,10 @@ class accion{
       delay(500);
       girl.izq(m_g);
       delay(500);
-      Audio.play("no_oigo.wav");
+      //**********************************
+      //Audio.play("no_oigo.wav");
+      //************************************
+      Audio.play("funfact.wav"); 
       do{Serial.println("yo también quiero escuchar"); 
               boy.no(m_b, rapidez);
              }while(Audio.isPlaying()==1);
@@ -194,11 +233,14 @@ class accion{
       delay(1000);
       boy.izq(m_b);
       girl.izq(m_g);
-      aleatorio = random(1,3);
+      //************************************
+     /*aleatorio = random(1,3);
       switch(aleatorio)
       { case 1: Audio.play("funfact1.wav"); break;
         case 2: Audio.play("funfact2.wav"); break;
-        case 3: Audio.play("funfact3.wav"); break;}
+        case 3: Audio.play("funfact3.wav"); break;}*/
+     //*************************
+     Audio.play("funfact.wav"); 
       
       do{Serial.println("funfact"); 
          /* girl.secuencia2(m_g); 
@@ -217,7 +259,10 @@ class accion{
     boy.derecha(m_b);
     girl.izq(m_g);
     delay(1500);
-    Audio.play("susurro_feliz.wav");
+    //***********************************
+    //Audio.play("susurro_feliz.wav");
+    //****************************************
+    Audio.play("funfact.wav"); 
     do{Serial.println("susurro feliz"); 
           
          }while(Audio.isPlaying()==1);
