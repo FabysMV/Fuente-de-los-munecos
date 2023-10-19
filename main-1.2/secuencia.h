@@ -12,14 +12,14 @@ TMRpcm Audio;   // Se crea un objeto para usar las funciones de la libreria TMRp
 //****************************************************************************************
 /*  C O N E X I O N E S   S P I 
 
-Arduino Nano/Arduino UNO
-12 -------------------> MISO
-11 -------------------->MOSI
-13 -------------------->SCK
-4 ---------------------->CS
-9 ---------------------->Speaker
+Arduino MEGA ---------> SD Card
+50-------------------> MISO
+51-------------------->MOSI
+52 -------------------->SCK
+53---------------------->CS
+11---------------------->Speaker
 GND ------------------>GND
-5V ------------------> VCC*/
+5V ------------------> VCC */
 //Declaración de los motores
 #include "motor_mov.h"
 motor_mov girl;
@@ -40,7 +40,7 @@ class accion{
   public:
 
   void init_audio(){
-      Audio.speakerPin = 9; //Selecciona la salida de audio: pin 9 Arduino UNO
+      Audio.speakerPin = 11; //Selecciona la salida de audio: pin 9 Arduino UNO
       Audio.quality(1); // Mejoramos la calidad de sonido (puede ser 0 o 1)
       Audio.setVolume(5); // Se selecciona el volumen: valor entre 0 y 7. Solo funciona bien si la calidad del audio está a 1. 
                           //En caso de que no se oiga nada o se  oiga mal, bajar volumen o borrar la función
