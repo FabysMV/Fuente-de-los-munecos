@@ -80,21 +80,18 @@ class motor_mov{
           servo.attach(pin);
           servo.write(135);
           delay(800); i++; }while(i<3);
-      
-      
-      
-     /* servo.attach(pin);
-      for(int i = 0; i<=90; i++)
-      {
-        if(ang == false){pos = 44; pos ++;}
-        else{pos --;}
-        if(pos>134){ang = true;}
-        servo.attach(pin);
-        servo.write(pos);
-        delay(rapidez);  };  */    
-        
-        
+     
       }//movimiento de negación
+
+      void no2(int pin){
+      int i=0;
+      do{ servo.attach(pin);
+          servo.write(45);
+          delay(400);
+          servo.attach(pin);
+          servo.write(135);
+          delay(400); i++; }while(i<2);
+      }
   
     
       

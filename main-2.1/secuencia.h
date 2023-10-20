@@ -32,6 +32,10 @@ class accion{
 
   /// secuencia para cuando no hay señal de microfono por 1 minuto ///
 
+
+  void neutro(){boy.neutro(n_b, m_b); delay(15); girl.neutro(n_g, m_g);}
+
+
   int getS(){return S;}
   
   void baile() //audio9
@@ -42,8 +46,10 @@ class accion{
           last_t = tiempo;
           tiempo = millis();
           cont = cont + (tiempo - last_t);
-          boy.no(m_b); delay(15);
-          girl.no(m_g);delay(15);
+          boy.izq(m_b); delay(15);
+          girl.derecha(m_g); delay(1000);
+          boy.derecha(m_b); delay(15);
+          girl.izq(m_g); delay(1000);
          }while(cont <= limite);
     cont = 0;
     delay(100); S = 1;}
@@ -60,7 +66,7 @@ class accion{
           boy.izq(m_b);
           delay(15);
           girl.no(m_g);
-          delay(500);
+          delay(15);
           boy.derecha(m_b);
          }while(cont <= limite);
     cont = 0;
@@ -77,8 +83,10 @@ class accion{
           last_t = tiempo;
           tiempo = millis();
           cont = cont + (tiempo - last_t);
-          boy.no(m_b); delay(15);
-          girl.no(m_g); delay(15);
+          boy.izq(m_b); delay(15);
+          girl.derecha(m_g); delay(1000);
+          boy.derecha(m_b); delay(15);
+          girl.izq(m_g); delay(1000);
          }while(cont <= limite);
     cont = 0;
     Serial.println("canto"); S = 0;}
@@ -95,7 +103,7 @@ class accion{
      //***********************************
      //susurro es audio 11
      Serial.println("11");
-     limite = 5000; tiempo = millis();
+     limite = 11000; tiempo = millis();
       do{Serial.println("susurros");
           last_t = tiempo;
           tiempo = millis();

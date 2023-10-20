@@ -52,6 +52,7 @@ void setup() {
   //entradas--botones
   pinMode(b_Up, INPUT);
   pinMode(b_Sleep, INPUT);
+  nenes.neutro();
 }
 
 void loop() {
@@ -142,10 +143,10 @@ void loop() {
             ////// NADA ////////////////////////////
             }//end if ruido nena
           else if(mic_g.getState() == 's') // le hablan bajo EXCLUSIVAMENTE a la nena
-          { flag = false;
+          { flag = false; delta_sec = 0;
             nenes.g_bajo();}//end if bajo a nena
           else if(mic_g.getState() == 'a')
-          { flag = false;
+          { flag = false; delta_sec = 0;
             nenes.g_alto();}//end if alto a nena  
       }//end if ruido a nene-----------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------
@@ -153,17 +154,17 @@ void loop() {
      else if(mic_g.getState() == 'n') //el microfono de la nena tiene ruido?
     {//---------------------------------------------------------------------------------- 
           if(mic_b.getState() == 's') // le hablan bajo EXCLUSIVAMENTE a nene
-          { flag = false;
+          { flag = false; delta_sec = 0;
             nenes.b_bajo();}//end if bajo a nene
           else if(mic_b.getState() == 'a') // le hablan alto EXCLUSIVAMENTE a nene 
-          {   flag = false;
+          {   flag = false; delta_sec = 0;
               nenes.b_alto();}//end if alto a nene
       }//end if ruido a nena-------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------
 ///      CUANDO NO HAY RUIDO --> LE HABLAN A LOS DOS    ///
       //¿a la nena le hablan alto?
       else if(mic_g.getState() == 'a')
-      {   flag = false;
+      {   flag = false; delta_sec = 0;
           if(mic_b.getState() == 'a')
           {//acciones AMBOS alto
             nenes.ambos_alto();}//le hablan alto al nene?
@@ -173,7 +174,7 @@ void loop() {
         }//end if nena alta 
         //¿a nena le hablan bajo?
       else if(mic_g.getState() == 's')
-      { flag = false;
+      { flag = false; delta_sec = 0;
         if(mic_b.getState() == 'a')
           { nenes.ambos_b();}//le hablan alto al nene?  
         else if(mic_b.getState() == 's')
@@ -190,9 +191,11 @@ void loop() {
           tiempo = millis();
           cont_s = cont_s + tiempo - tiempo_prev; //incrementa el conteo en delta */
           switch(s){case 0: nenes.baile(); flag = false;
-                             /* Serial.println("acabe");*/ break;
-                      case 1: nenes.risa(); flag = false; break;
-                      case 2: nenes.canto();  flag = false; break;}//end switch s
+                            delta_sec = 0; break;
+                      case 1: nenes.risa(); flag = false;  
+                              delta_sec = 0; break; 
+                      case 2: nenes.canto();  flag = false; 
+                              delta_sec = 0; break;}//end switch s
             
           s = nenes.getS();
          /* if(cont_s >= 30000)//el límite debe de ser la duración del audio + 30 segundos
