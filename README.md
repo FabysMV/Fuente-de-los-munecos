@@ -99,22 +99,30 @@ El funcionamiento básico de la programación de los muñecos se describe en el 
 
 >Diagrama de flujo
 
-Lo primero que se hace es el control de estado de los muñecos, esto se logra con dos botones que los despiertan o los ponen a dormir.
+Lo primero que se hace es asignar los estados de los micrófonos, se analizan los datos recividos. 
 ```ruby
-if(digitalRead(Up) == HIGH)//si se presionó el botón, despertarán los muñecos
-  {Up = true;}
- 
-  if(digitalRead(Sleep) == HIGH && digitalRead(Up)== LOW)//si se presionó el botón de dormir
-  { delta_sec = 0;
-    Up = false;
-    Serial.println("dormido");
-    do{ //vemos que no se haya dado la indicación de que despierten
-        if(digitalRead(Up) == HIGH)
-        {Up = true; Serial.println("despertando...");
-        delay(100);}//si es así, cambiamos el estado de Up a activo
-      }while(Up == false); //cuando Up esté activo, salimos del ciclo
-    }
+if(volts >= 3.0){Serial.println("detectado alto?");
+          ancho++;
+          cont_sh = 0;
+          if(ancho > last_ancho){last_ancho = ancho;}    
+        }//voltaje alto
+       
+      
+       else if(volts < 3.0)
+          {
+            if(ancho != 0)
+              {pico++; Serial.println("PICOOOO");}
+            //inicio contador
+            last_sh = time_sh;
+            time_sh = millis();
+            Serial.print("cont_sh: ");  Serial.println(cont_sh);
+            cont_sh = cont_sh + (time_sh - last_sh);
+            if(cont_sh >= tiempo_silencio){check = false; cont_sh = 0;}
+            ancho = 0;
+              
+            }//voltaje bajo
 ```
+
 Después se revisan las primeras condiciones mostradas en la tabla anterior. 
 ```ruby
 if(bajo<analogRead(A0)<alto) //el microfono de la nene tiene ruido?
@@ -198,6 +206,18 @@ if(flag == true)
        }//end if flag true --> que el contador ya llegó al limite
 ```
 
+*__Python__*
+
+Para poder reproducir los audios con forme a cada estado, se vincula el serial de arduino con Python usando PyGame.
+```ruby
+#codigo prron para el cocotron
+import serial
+import pygame
+
+# Configura la comunicación serial
+serial_port = "COM9"  # Reemplaza esto con el puerto serial que estás utilizando
+baud_rate = 9600
+```
 
 
 
