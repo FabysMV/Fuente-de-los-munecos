@@ -71,7 +71,7 @@ class accion{
 
   void canto() //audio 10
   {
-    Serial.println("12");
+    Serial.println("10");
     limite = 58000; tiempo = millis();
       do{Serial.println("CANTO"); 
           last_t = tiempo;

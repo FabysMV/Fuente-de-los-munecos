@@ -56,15 +56,14 @@ class mic{
        else if(volts < 3.0)
           {
             if(ancho != 0)
-              {pico++; Serial.println("PICOOOO");}
+              {pico++; /*Serial.println("PICOOOO");*/}
             //inicio contador
             last_sh = time_sh;
             time_sh = millis();
-            Serial.print("cont_sh: ");  Serial.println(cont_sh);
+            /*Serial.print("cont_sh: ");  Serial.println(cont_sh);*/
             cont_sh = cont_sh + (time_sh - last_sh);
             if(cont_sh >= tiempo_silencio){check = false; cont_sh = 0;}
             ancho = 0;
-              
             }//voltaje bajo
     }
   
@@ -75,8 +74,8 @@ class mic{
 
 
  void SetState(){
-      Serial.print("picos: ");  Serial.print(pico); Serial.print("\t");
-      Serial.print("ancho: ");  Serial.println(last_ancho);
+      /*Serial.print("picos: ");  Serial.print(pico); Serial.print("\t");
+      Serial.print("ancho: ");  Serial.println(last_ancho);*/
       if(last_ancho >=10){Serial.println("ALTO"); state = 'a';}
       else if (1 <= last_ancho < 10 )
         {

@@ -52,14 +52,6 @@ void setup() {
   //entradas--botones
   pinMode(b_Up, INPUT);
   pinMode(b_Sleep, INPUT);
-  //salidas--LED
-  pinMode(Led_g, OUTPUT);
-  pinMode(Led_b, OUTPUT);
-  /////////////////////////////
-//parameter value of 1000 is fully counter-clockwise, 2000 is fully clockwise, and 1500 is in the middle.
-//-----------------Revisión del movimiento de los motores------------
-  
-//--------------------------------------------------------------------  
 }
 
 void loop() {
@@ -87,18 +79,18 @@ void loop() {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   if(Up == true) //se ha apretado el botón que despierta a los niños
   {
-    Serial.println("despierto!!");// Procedemos a revisar el estado el micrófono
+    //Serial.println("despierto!!");// Procedemos a revisar el estado el micrófono
     
-    Serial.println("revisando micrófonos...");// /------------
+    //Serial.println("revisando micrófonos...");// /------------
     mic_g.microfono(A1);
     mic_b.microfono(A0);
-    Serial.print(mic_g.getVolts()); Serial.print("\t"); Serial.println(mic_b.getVolts());
+   // Serial.print(mic_g.getVolts()); Serial.print("\t"); Serial.println(mic_b.getVolts());
 
     //se ha detectado un sonido
 
 
    if(mic_g.getVolts() >= 3.0 || mic_b.getVolts() >= 3.0){
-    Serial.println("detectado");
+   // Serial.println("detectado");
 
     check = true;
     
@@ -107,14 +99,14 @@ void loop() {
     
 
     do{
-      Serial.println("MUESTRA");
+      //Serial.println("MUESTRA");
       //vamos a tomar la muestra de ambos micrófonos
-      if (mic_g.getCheck() == true){mic_g.microfono(A1); Serial.print("Volts_g: ");  Serial.println(mic_g.getVolts());
+      if (mic_g.getCheck() == true){mic_g.microfono(A1); /*Serial.print("Volts_g: ");  Serial.println(mic_g.getVolts());*/
                                     mic_g.evaluar();} //lo hará mientras no haya terminado de contar
 
-                                    Serial.println("***********************"); 
-                                    Serial.println("***********************"); 
-      if (mic_b.getCheck() == true){mic_b.microfono(A0); Serial.print("Volts_b: ");  Serial.println(mic_b.getVolts());
+                                   /* Serial.println("***********************"); 
+                                    Serial.println("***********************"); */
+      if (mic_b.getCheck() == true){mic_b.microfono(A0); /*Serial.print("Volts_b: ");  Serial.println(mic_b.getVolts());*/
                                     mic_b.evaluar();}//lo hará mientras no haya terminado de contar
          
         //si uno termina de escuchar y su timer se desborda, ya no tomaremos la muestra, eso se logra con una variable booleana
@@ -132,7 +124,7 @@ void loop() {
   // Serial.print("Estado niña: ");  Serial.print(mic_g.getState()); Serial.print("\t"); Serial.print("Estado niño: "); Serial.println(mic_b.getState());
 
      
-    Serial.println("----------------------------------"); 
+   // Serial.println("----------------------------------"); 
 
   //---- ASIGNACIÓN DE ACCIÓN POR ESTADOS ----  
     if(mic_b.getState() == 'n') //el microfono del nene tiene ruido?
@@ -146,7 +138,7 @@ void loop() {
             in ++;
             if(delta_sec >= 60000){flag = true;
                                    delta_sec = 0;}
-             Serial.print("**********"); Serial.print(delta_sec); Serial.println("**********");
+            // Serial.print("**********"); /*Serial.print(delta_sec);*/ Serial.println("**********");
             ////// NADA ////////////////////////////
             }//end if ruido nena
           else if(mic_g.getState() == 's') // le hablan bajo EXCLUSIVAMENTE a la nena
@@ -198,7 +190,7 @@ void loop() {
           tiempo = millis();
           cont_s = cont_s + tiempo - tiempo_prev; //incrementa el conteo en delta */
           switch(s){case 0: nenes.baile(); flag = false;
-                              Serial.println("acabe"); break;
+                             /* Serial.println("acabe");*/ break;
                       case 1: nenes.risa(); flag = false; break;
                       case 2: nenes.canto();  flag = false; break;}//end switch s
             
