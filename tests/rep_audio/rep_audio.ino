@@ -3,13 +3,13 @@
 #include <SPI.h>              // Se incluye la libreria para la comunicacion SPI
 #include <TMRpcm.h>           //  Se incluye la libreria para reproducir .WAV
 
-#define SD_ChipSelectPin 4  // Selecciona la tarjeta SD. Puede ser cualquier pin que NO se esté utilizando ya. 
+#define SD_ChipSelectPin 53  // Selecciona la tarjeta SD. Puede ser cualquier pin que NO se esté utilizando ya. 
 
 TMRpcm Audio;   // Se crea un objeto para usar las funciones de la libreria TMRpcm
 
 bool boton_A = 0; //Variable que guarda el estado del pulsador de cambiar de cancion
 bool boton_B = 0; //Variable que guarda el estado del pulsador de pausar
-int song = 0; //Se inician en 0 para que cuando se incremente la cancion al principio se reproduzca la cancion 1
+int song = 1; //Se inician en 0 para que cuando se incremente la cancion al principio se reproduzca la cancion 1
 int last_song = 0; //Almacena el número de la ultima cancion
 
 /*  C O N E X I O N E S   S P I 
@@ -37,7 +37,7 @@ GND ------------------>GND
 
 void setup(){
 
-  Audio.speakerPin = 9; //Selecciona la salida de audio: pin 9 Arduino UNO
+  Audio.speakerPin = 11; //Selecciona la salida de audio: pin 9 Arduino UNO
   Audio.quality(1); // Mejoramos la calidad de sonido (puede ser 0 o 1)
   Audio.setVolume(5); // Se selecciona el volumen: valor entre 0 y 7. Solo funciona bien si la calidad del audio está a 1. 
                       //En caso de que no se oiga nada o se  oiga mal, bajar volumen o borrar la función
@@ -59,7 +59,7 @@ void setup(){
 }
 
 void loop(){  
-
+  Serial.println(Audio.isPlaying());
   boton_A = digitalRead(3); //Se lee el boton de pasar de cancion
   boton_B = digitalRead(2); //Se lee el boton de pausa
 
@@ -82,9 +82,9 @@ if(song != last_song){ //Reproduce el audio una unica vez siempre que se haya ca
 
    switch(song)
    {
-      case 1: Audio.play("NO.wav"); Serial.println("No te acerques"); break;
-      case 2: Audio.play("funfact.wav"); Serial.println("barrio de Xonaca"); break;
-      case 3: Audio.play("historia.wav"); Serial.println("Morimos yendo a la escuela"); break;
+      case 1: Audio.play("audio3.wav"); Serial.println("No te acerques"); break;
+      case 2: Audio.play("audio2.wav"); Serial.println("barrio de Xonaca"); break;
+      case 3: Audio.play("audio3.wav"); Serial.println("Morimos yendo a la escuela"); break;
    }
 
 last_song = song;
